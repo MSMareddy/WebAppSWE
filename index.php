@@ -16,7 +16,7 @@
 		<br><br>
 		Select price range:
 		<div class="range">
-			<input type="range" name ="price" min="1" max="5" steps="1" value="1">
+			<input type="range" name ="price" min="0" max="4" steps="1" value="0">
 		</div>
 		Cheap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Expensive<br><br><br>
 		<input type = "submit">
