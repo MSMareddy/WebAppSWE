@@ -55,34 +55,41 @@
 		$option = $_POST["option"] != "" ?$_POST["option"]:"pizza";
 		$price = $_POST["price"] != ""?$_POST["price"]:"0";
 	?>
-	<table align="left" width ="69%">
+	<h1 align="center">Find Cheap Restaurants!</h1>
+	<table align="center" width ="81%">
 		<tr>
-			<td width="200px" height="200px">
+			<td width="100px" height="200px">
 				<form method = "post">
-					Select restaurant option:
-					<select name ="option">
-						<option value="taco"<?php if($option == "taco"){?> selected <?php }?>>Taco</option>
-						<option value="pizza" <?php if($option == "pizza"){?> selected <?php }?>>Pizza</option>
-						<option value="hamburger" <?php if($option == "hamburger"){?> selected <?php }?>>Hamburger</option>
-					</select>
-					<br><br>
-					Select price range:
-					<div class="range">
-						<input type="range" name ="price" min="0" max="4" steps="1" value="<?php echo $price; ?>">
-					</div>
-					Cheap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Expensive<br><br><br>
-					<input type = "submit">
+					<table>
+						<tr>
+							<td width="200px" height="50px">Select restaurant option:</td>
+							<td>
+								<select name ="option">
+								<option value="taco" <?php if($option == "taco"){?> selected <?php }?>>Taco</option>
+								<option value="pizza" <?php if($option == "pizza"){?> selected <?php }?>>Pizza</option>
+								<option value="hamburger" <?php if($option == "hamburger"){?> selected <?php }?>>Hamburger</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td width="200px" height="50px">Select price range:</td>
+							<td>
+							<input type="range" id = "range" name ="price" min="0" max="4" steps="1" value="<?php echo $price; ?>"><br>
+							Cheap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Expensive
+							</td>
+						</tr>
+						<tr><td>&nbsp;</td></tr>
+						<tr>
+							<td colspan = "2" align ="center"><input type = "submit"></td>
+						</tr>
+					</table>
 				</form>
 			</td>
-			<td rowspan = "2" width="200px" height="200px">
+			<td rowspan = "2" width="300px" height="400px">
 				<div id="map" style="width:100%; height:100%"></div>
 				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDm9MtndFo7OyIi8HvTx4NnUDq9xN5BKE&libraries=places&callback=initMap" async defer></script>
 			</td>
 		</tr>
-		<!-- getting all the Post arguments -->
-		Arguments:
-		<?php echo $option; ?>
-		<?php echo $price; ?>
 	</table>
 </body>
 </html>
