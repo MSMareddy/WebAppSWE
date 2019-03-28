@@ -1,6 +1,53 @@
 <!--testing website map-app-swe.herokuapp.com -->
 <head>
 <title>UI</title>
+ <script>
+      // This example requires the Places library. Include the libraries=places
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+      var map;
+      var service;
+      var infowindow;
+
+      function initMap() {
+        var sydney = new google.maps.LatLng(-33.867, 151.195);
+
+        infowindow = new google.maps.InfoWindow();
+
+        map = new google.maps.Map(
+            document.getElementById('map'), {center: sydney, zoom: 15});
+
+        var request = {
+          query: 'Museum of Contemporary Art Australia',
+          fields: ['name', 'geometry'],
+        };
+
+        service = new google.maps.places.PlacesService(map);
+
+        service.findPlaceFromQuery(request, function(results, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            for (var i = 0; i < results.length; i++) {
+              createMarker(results[i]);
+            }
+
+            map.setCenter(results[0].geometry.location);
+          }
+        });
+      }
+
+      function createMarker(place) {
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.setContent(place.name);
+          infowindow.open(map, this);
+        });
+      }
+    </script>
 </head>
 <body>
 <center>
@@ -22,7 +69,8 @@
 		<input type = "submit">
 	</form>
 	</td>
-    <td rowspan="2"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11998.018217782852!2d-96.01344799760741!3d41.254348900000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87938db043742f41%3A0x1c6f28dd6f040e06!2sUniversity+of+Nebraska+Omaha!5e0!3m2!1sen!2sus!4v1551744692846" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></th>
+    <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDm9MtndFo7OyIi8HvTx4NnUDq9xN5BKE&libraries=places&callback=initMap" async defer></script>
   </tr>
   <!-- getting all the Post arguments -->
   Arguments:
