@@ -52,6 +52,10 @@
     <meta charset="utf-8">
 </head>
 <body>
+ <?php
+		$option = $_POST["option"] != "" ?$_POST["option"]:"Pizza";
+		$price = $_POST["price"] != ""?$_POST["price"]:"0";
+	?>
 <center>
 <table align="left" width ="69%">
   <tr>
@@ -79,8 +83,8 @@
   </tr>
   <!-- getting all the Post arguments -->
   Arguments:
-  <?php echo $_POST["option"]; ?>
-  <?php echo $_POST["price"]; ?>
+  <?php echo $option; ?>
+  <?php echo $price; ?>
 </table>
 </center>
 </body>
