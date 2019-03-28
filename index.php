@@ -63,14 +63,14 @@
 	<form method = "post">
 		Select restaurant option:
 		<select name ="option">
-			<option value="taco">Taco</option>
-			<option value="pizza">Pizza</option>
-			<option value="Hamburger">Hamburger</option>
+			<option value="taco"<?php if($option == "taco"){?> selected <?php }?>>Taco</option>
+			<option value="pizza" <?php if($option == "pizza"){?> selected <?php }?>>Pizza</option>
+			<option value="hamburger" <?php if($option == "hamburger"){?> selected <?php }?>>Hamburger</option>
 		</select>
 		<br><br>
 		Select price range:
 		<div class="range">
-			<input type="range" name ="price" min="0" max="4" steps="1" value="0">
+			<input type="range" name ="price" min="0" max="4" steps="1" value="<?php echo $price; ?>">
 		</div>
 		Cheap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Expensive<br><br><br>
 		<input type = "submit">
