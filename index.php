@@ -53,7 +53,7 @@
 </head>
 <body>
  <?php
-		$option = $_POST["option"] != "" ?$_POST["option"]:"Pizza";
+		$option = $_POST["option"] != "" ?$_POST["option"]:"pizza";
 		$price = $_POST["price"] != ""?$_POST["price"]:"0";
 	?>
 <center>
