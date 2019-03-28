@@ -50,25 +50,12 @@
     </script>
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-	<style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 425px;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
 </head>
 <body>
 <center>
-<table style="width:100%">
+<table align="left" width ="69%">
   <tr>
-    <td>
+    <td width="200px" height="200px">
 	<form method = "post">
 		Select restaurant option:
 		<select name ="option">
@@ -84,8 +71,8 @@
 		<input type = "submit">
 	</form>
 	</td>
-	<td rowspan="2">
-		<div id="map"></div>
+	<td rowspan = "2" width="200px" height="200px">
+		<div id="map" style="width:100%; height:100%"></div>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDm9MtndFo7OyIi8HvTx4NnUDq9xN5BKE&libraries=places&callback=initMap" async defer></script>
 	</td>
   </tr>
