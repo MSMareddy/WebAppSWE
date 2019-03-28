@@ -61,6 +61,7 @@
 		<select name ="option">
 			<option value="taco">Taco</option>
 			<option value="pizza">Pizza</option>
+			<option value="Hamburger">Hamburger</option>
 		</select>
 		<br><br>
 		Select price range:
