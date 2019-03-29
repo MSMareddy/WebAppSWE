@@ -24,8 +24,7 @@ select {
 	height: 15%;
 }
 #title {
-	text-align: center;
-	width: 83%;
+	text-align: left;
 }
 #layout {
 	margin: auto; 

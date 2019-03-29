@@ -1,9 +1,10 @@
-<!--testing website map-app-swe.herokuapp.com -->
+<!--Testing website map-app-swe.herokuapp.com -->
 <!DOCTYPE html>
 <html lang = "en">
 	<head>
 		<title>Restaurant Finder</title>
 		<meta charset="utf-8">
+		<!-- Icon from https://gauger.io/fonticon/ -->
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<script>
@@ -62,8 +63,8 @@
 		$priceArg = $_POST["price"];
 		$optionCookie = $_COOKIE["optionCookie"];
 		$priceCookie = $_COOKIE["priceCookie"];
-		if( empty($optionArg) && empty($priceArg) ) {
-			if ( empty($optionCookie) && empty($priceCookie)) {
+		if(empty($optionArg) && empty($priceArg)) {
+			if (empty($optionCookie) && empty($priceCookie)) {
 				$option = "pizza";
 				$price = "0";
 			}
@@ -73,8 +74,8 @@
 			}
 		}
 		else {
-			setcookie("optionCookie", $optionArg, time()+60*60*24*7);
-			setcookie("priceCookie", $priceArg, time()+60*60*24*7);
+			setcookie("optionCookie", $optionArg, time() + 60*60*24*7);
+			setcookie("priceCookie", $priceArg, time() + 60*60*24*7);
 			$option = $optionArg;
 			$price = $priceArg;
 		}
@@ -118,12 +119,12 @@
 </html>
 <!--
 <?php
-echo "Log: \n";
+echo "Log:\n";
 echo "Arguments: " . $optionArg . ", " . $priceArg . ".\n";
 echo "Cookie: " . $_COOKIE["optionCookie"] . ", " . $_COOKIE["priceCookie"] . ".\n";
 echo "Element: " . $option . ", " . $price . ".\n";
 }
-catch(exception $e) {
+catch(Exception $e) {
 	echo $e->getMessage();
 }
 ?>
