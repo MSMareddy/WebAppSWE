@@ -81,7 +81,7 @@
 						</tr>
 						<tr><td>&nbsp;</td></tr>
 						<tr>
-							<td colspan = "2" align ="center"><input type = "submit"></td>
+							<td colspan = "2" align ="center"><input type = "submit" class = "submit" value = "Search"></td>
 						</tr>
 					</table>
 				</form>
