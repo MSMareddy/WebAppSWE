@@ -2,12 +2,51 @@ select {
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
+	height: 26px;
+	width: 100%;
 }
 .submit {
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
 	width: 10em;  height: 2em;
+	margin: auto;
+	display: block;
+}
+.formelement {
+	margin: auto;
+	width: 10%;
+	height: 15%;
+}
+.label {
+	margin: auto;
+	width: 20%;
+	height: 15%;
+}
+#title {
+	text-align: center;
+	width: 83%;
+}
+#layout {
+	margin: auto; 
+	width: 83%;
+	display: block;
+}
+#submitEle{
+	width: 30%;
+	height: 20%;
+}
+#mapele {
+	width: 300px; 
+	height: 400px;
+	padding: 1em;
+}
+#map {
+	width:100%;
+	height:100%;
+}
+.empty {
+	height: 25%;
 }
 /* http://danielstern.ca/range.css/ */
 input[type=range] {
@@ -94,4 +133,32 @@ input[type=range]:focus::-ms-fill-lower {
 }
 input[type=range]:focus::-ms-fill-upper {
   background: rgba(54, 126, 189, 0.78);
+}
+/* Nav bar https://www.w3schools.com/css/css_navbar.asp */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+}
+
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+li a.active {
+  color: white;
+  background-color: #4CAF50;
 }
