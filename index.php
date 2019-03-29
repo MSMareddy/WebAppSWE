@@ -56,8 +56,28 @@
 	  <li><a href ="https://github.com/MSMareddy/WebAppSWE">About</a></li>
 	</ul>
 	<?php
-		$option = $_POST["option"] != "" ?$_POST["option"]:"pizza";
-		$price = $_POST["price"] != ""?$_POST["price"]:"0";
+	try
+	{
+		$optionArg = $_POST["option"];
+		$priceArg = $_POST["price"];
+		$optionCookie = $_COOKIE["optionCookie"];
+		$priceCookie = $_COOKIE["priceCookie"];
+		if( empty($optionArg) && empty($priceArg) ) {
+			if ( empty($optionCookie) && empty($priceCookie)) {
+				$option = "pizza";
+				$price = "0";
+			}
+			else {
+				$option = $optionCookie;
+				$price = $priceCookie;
+			}
+		}
+		else {
+			setcookie("optionCookie", $optionArg, time()+60*60*24*7);
+			setcookie("priceCookie", $priceArg, time()+60*60*24*7);
+			$option = $optionArg;
+			$price = $priceArg;
+		}
 	?>
 	<form method = "post">
 	<h1 id = "title">Find Cheap Restaurants!</h1>
@@ -96,3 +116,15 @@
 	</form>
 </body>
 </html>
+<!--
+<?php
+echo "Log: \n";
+echo "Arguments: " . $optionArg . ", " . $priceArg . ".\n";
+echo "Cookie: " . $_COOKIE["optionCookie"] . ", " . $_COOKIE["priceCookie"] . ".\n";
+echo "Element: " . $option . ", " . $price . ".\n";
+}
+catch(exception $e) {
+	echo $e->getMessage();
+}
+?>
+!-->
