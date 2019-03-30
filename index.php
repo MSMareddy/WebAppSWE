@@ -1,5 +1,29 @@
 <!--Testing website map-app-swe.herokuapp.com -->
 <!DOCTYPE html>
+<?php
+try
+{
+	$optionArg = $_POST["option"];
+	$priceArg = $_POST["price"];
+	$optionCookie = $_COOKIE["optionCookie"];
+	$priceCookie = $_COOKIE["priceCookie"];
+	if(empty($optionArg) && empty($priceArg)) {
+		if (empty($optionCookie) && empty($priceCookie)) {
+			$option = "pizza";
+			$price = "0";
+		}
+		else {
+			$option = $optionCookie;
+			$price = $priceCookie;
+		}
+	}
+	else {
+		setcookie("optionCookie", $optionArg, time() + 60*60*24*7);
+		setcookie("priceCookie", $priceArg, time() + 60*60*24*7);
+		$option = $optionArg;
+		$price = $priceArg;
+	}
+?>
 <html lang = "en">
 	<head>
 		<title>Restaurant Finder</title>
@@ -56,30 +80,6 @@
 	  <li><a class="active" href="/">Home</a></li>
 	  <li><a href ="https://github.com/MSMareddy/WebAppSWE">About</a></li>
 	</ul>
-	<?php
-	try
-	{
-		$optionArg = $_POST["option"];
-		$priceArg = $_POST["price"];
-		$optionCookie = $_COOKIE["optionCookie"];
-		$priceCookie = $_COOKIE["priceCookie"];
-		if(empty($optionArg) && empty($priceArg)) {
-			if (empty($optionCookie) && empty($priceCookie)) {
-				$option = "pizza";
-				$price = "0";
-			}
-			else {
-				$option = $optionCookie;
-				$price = $priceCookie;
-			}
-		}
-		else {
-			setcookie("optionCookie", $optionArg, time() + 60*60*24*7);
-			setcookie("priceCookie", $priceArg, time() + 60*60*24*7);
-			$option = $optionArg;
-			$price = $priceArg;
-		}
-	?>
 	<form method = "post">
 	<h1 id = "title">Find Cheap Restaurants!</h1>
 	<div class="grid-container">
@@ -104,7 +104,7 @@
 
 		<div class="PriceSlider">
 			<input type="range" id = "range" name ="price" min="0" max="4" step="1" value="<?php echo $price; ?>"><br>
-			Cheap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Expensive
+			<div><div id="leftlabel">Cheap</div><div id="rightlabel">Expensive</div></div>
 		</div>
 		<div class="SubmitButton">
 			<input type = "submit" class = "submit" value = "Search">
