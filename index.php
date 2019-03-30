@@ -82,38 +82,35 @@
 	?>
 	<form method = "post">
 	<h1 id = "title">Find Cheap Restaurants!</h1>
-	<table id = "layout">
-		<tr>
-			<td colspan = "2" class ="empty"></td>
-			<td rowspan ="5" id="mapele">
-				<div id="map"></div>
-				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDm9MtndFo7OyIi8HvTx4NnUDq9xN5BKE&libraries=places&callback=initMap" async defer></script>
-			</td>
-		</tr>
-		<tr>
-			<td class="label">Select restaurant option:</td>
-			<td class ="formelement">
-				<select name ="option">
-					<option value="taco" <?php if($option == "taco"){?> selected <?php }?>>Taco</option>
-					<option value="pizza" <?php if($option == "pizza"){?> selected <?php }?>>Pizza</option>
-					<option value="hamburger" <?php if($option == "hamburger"){?> selected <?php }?>>Hamburger</option>
-				</select>
-			</td>
-		</tr>
-		<tr>
-			<td class="label">Select price range:</td>
-			<td class ="formelement">
+	<div class="grid-container">
+		<div class="Empty1"></div>
+		<div class="Map">
+			<div id="map"></div>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDm9MtndFo7OyIi8HvTx4NnUDq9xN5BKE&libraries=places&callback=initMap" async defer></script>
+		</div>
+		<div class="TypeLabel">
+			Select restaurant option:
+		</div>
+		<div class="TypeListBox">
+			<select name ="option">
+				<option value="taco" <?php if($option == "taco"){?> selected <?php }?>>Taco</option>
+				<option value="pizza" <?php if($option == "pizza"){?> selected <?php }?>>Pizza</option>
+				<option value="hamburger" <?php if($option == "hamburger"){?> selected <?php }?>>Hamburger</option>
+			</select>
+		</div>
+		<div class="OptionLabel">
+			Select price range:
+		</div>
+
+		<div class="PriceSlider">
 			<input type="range" id = "range" name ="price" min="0" max="4" step="1" value="<?php echo $price; ?>"><br>
 			Cheap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Expensive
-			</td>
-		</tr>
-		<tr>
-			<td id="submitEle" colspan = "2"><input type = "submit" class = "submit" value = "Search"></td>
-		</tr>
-		<tr>
-			<td colspan = "2" class ="empty"></td>
-		</tr>
-	</table>
+		</div>
+		<div class="SubmitButton">
+			<input type = "submit" class = "submit" value = "Search">
+		</div>
+		<div class="Empty2"></div>
+	</div>
 	</form>
 </body>
 </html>
