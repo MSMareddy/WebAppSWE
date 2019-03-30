@@ -3,23 +3,33 @@
 <?php
 try
 {
+	#get Arguments
 	$optionArg = $_POST["option"];
 	$priceArg = $_POST["price"];
+	#get Cookie values
 	$optionCookie = $_COOKIE["optionCookie"];
 	$priceCookie = $_COOKIE["priceCookie"];
+	#check if arguments empty
 	if(empty($optionArg) && empty($priceArg)) {
+		#check if cookie empty
 		if (empty($optionCookie) && empty($priceCookie)) {
+			#set elements to default values
 			$option = "pizza";
 			$price = "0";
 		}
 		else {
+			#set element to cookie values
 			$option = $optionCookie;
 			$price = $priceCookie;
 		}
 	}
 	else {
+		#set cookies to argument values
 		setcookie("optionCookie", $optionArg, time() + 60*60*24*7);
 		setcookie("priceCookie", $priceArg, time() + 60*60*24*7);
+		$optionCookie = $optionArg;
+		$priceCookie = $priceArg;
+		#set element to argument values
 		$option = $optionArg;
 		$price = $priceArg;
 	}
@@ -116,12 +126,14 @@ try
 </html>
 <!--
 <?php
+#display all values for logging
 echo "Log:\n";
 echo "Arguments: " . $optionArg . ", " . $priceArg . ".\n";
-echo "Cookie: " . $_COOKIE["optionCookie"] . ", " . $_COOKIE["priceCookie"] . ".\n";
+echo "Cookie: " . $optionCookie . ", " . $optionCookie . ".\n";
 echo "Element: " . $option . ", " . $price . ".\n";
 }
 catch(Exception $e) {
+	#prevent exceptions from breaking code
 	echo $e->getMessage();
 }
 ?>
