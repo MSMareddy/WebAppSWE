@@ -104,7 +104,7 @@ try
 
 		<div class="PriceSlider">
 			<input type="range" id = "range" name ="price" min="0" max="4" step="1" value="<?php echo $price; ?>"><br>
-			<div><div id="leftlabel">Cheap</div><div id="rightlabel">Expensive</div></div>
+			<div id ="sliderlabel"><div id="leftlabel">Cheap</div><div id="rightlabel">Expensive</div></div>
 		</div>
 		<div class="SubmitButton">
 			<input type = "submit" class = "submit" value = "Search">
