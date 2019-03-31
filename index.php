@@ -129,12 +129,17 @@ try
 #display all values for logging
 echo "Log:\n";
 echo "Arguments: " . $optionArg . ", " . $priceArg . ".\n";
-echo "Cookie: " . $optionCookie . ", " . $optionCookie . ".\n";
+echo "Cookie: " . $optionCookie . ", " . $priceCookie . ".\n";
 echo "Element: " . $option . ", " . $price . ".\n";
 }
 catch(Exception $e) {
 	#prevent exceptions from breaking code
 	echo $e->getMessage();
+	date_default_timezone_set(America/Chicago);
+	$date = date('m-d-Y h:i:s a');
+	error_log($date);
+	error_log($e->getMessage());
+	error_log($e->getTraceAsString());
 }
 ?>
 !-->
