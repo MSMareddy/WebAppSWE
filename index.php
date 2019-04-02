@@ -40,10 +40,11 @@ try
 	if (isset($_COOKIE["radiusCookie"])) {
 		$radius = $_COOKIE["radiusCookie"];
 	}
-	$address = "PKI";
+	$address = "Peter Kiewit Institute";
 	if (isset($_COOKIE["addressCookie"])) {
 		$address = $_COOKIE["addressCookie"];
 	}
+	$latLong = "41.2471, 96.0168"
 ?>
 <html lang = "en">
 	<head>
@@ -61,7 +62,7 @@ try
 			var infowindow;
 
 			function initMap() {
-			var PKI = new google.maps.LatLng(41.2471, 96.0168);
+			var PKI = new google.maps.LatLng(<?php echo $latLong; ?>);
 
 			infowindow = new google.maps.InfoWindow();
 
