@@ -61,15 +61,15 @@ try
 			var infowindow;
 
 			function initMap() {
-			var sydney = new google.maps.LatLng(-33.867, 151.195);
+			var PKI = new google.maps.LatLng(41.2471, 96.0168);
 
 			infowindow = new google.maps.InfoWindow();
 
 			map = new google.maps.Map(
-				document.getElementById('map'), {center: sydney, zoom: 15});
+				document.getElementById('map'), {center: PKI, zoom: 15});
 
 			var request = {
-			  query: 'Museum of Contemporary Art Australia',
+			  query: 'Peter Kiewit Institute',
 			  fields: ['name', 'geometry'],
 			};
 
