@@ -4,11 +4,13 @@
 try
 {
 	#get Arguments
-	$optionArg = $_POST["option"];
-	$priceArg = $_POST["price"];
+	$optionArg = isset($_POST["option"]) ? $_POST["option"] : "";
+	$priceArg = isset($_POST["price"]) ? $_POST["price"] : "";
+	
 	#get Cookie values
-	$optionCookie = $_COOKIE["optionCookie"];
-	$priceCookie = $_COOKIE["priceCookie"];
+	$optionCookie = isset($_COOKIE["optionCookie"]) ? $_COOKIE["optionCookie"] : "";
+	$priceCookie = isset($_COOKIE["priceCookie"]) ? $_COOKIE["priceCookie"] : "";
+	
 	#check if arguments empty
 	if(empty($optionArg) && empty($priceArg)) {
 		#check if cookie empty
@@ -33,6 +35,15 @@ try
 		$option = $optionArg;
 		$price = $priceArg;
 	}
+	
+	$radius = 10;
+	if (isset($_COOKIE["radiusCookie"])) {
+		$radius = $_COOKIE["radiusCookie"];
+	}
+	$address = "PKI";
+	if (isset($_COOKIE["addressCookie"])) {
+		$address = $_COOKIE["addressCookie"];
+	}
 ?>
 <html lang = "en">
 	<head>
@@ -41,6 +52,9 @@ try
 		<!-- Icon from https://gauger.io/fonticon/ -->
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		
+		<!-- <?php echo "Radius: ", $radius, " Address: ", $address; ?> -->
+		
 		<script>
 			var map;
 			var service;
