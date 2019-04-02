@@ -69,7 +69,7 @@ try
 				document.getElementById('map'), {center: PKI, zoom: 15});
 
 			var request = {
-			  query: 'Peter Kiewit Institute',
+			  query: '<?php echo $address; ?>',
 			  fields: ['name', 'geometry'],
 			};
 
