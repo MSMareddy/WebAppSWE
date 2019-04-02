@@ -45,6 +45,9 @@ try
 		$address = $_COOKIE["addressCookie"];
 	}
 	$latLong = "41.2471, 96.0168"
+	if (isset($_COOKIE["latLongCookie"])) {
+		$latLong = $_COOKIE["latLongCookie"];
+	}
 ?>
 <html lang = "en">
 	<head>
