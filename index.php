@@ -98,10 +98,14 @@ try
 				for (var i = 0; i < results.length; i++) {
 				  createMarker(results[i]);
 				}
+				console.log(results.length);
+				if (results.length == 0) {
+					alert("No Places found for Restraunt type: "+ <?php echo $option; ?> + " and price level: " + <?php echo $price; ?>+ "\nPlease choose something else.");
+				}
 			  }
 			});
 			}
-
+		
 			function createMarker(place) {
 			var marker = new google.maps.Marker({
 			  map: map,
