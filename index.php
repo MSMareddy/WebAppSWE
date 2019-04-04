@@ -117,7 +117,7 @@ try
 		<div class="Empty1"></div>
 		<div class="Map">
 			<div id="map"></div>
-			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDm9MtndFo7OyIi8HvTx4NnUDq9xN5BKE&libraries=places&callback=initMap" async defer></script>
+			<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo getenv('API_KEY'); ?>&libraries=places&callback=initMap" async defer></script>
 		</div>
 		<div class="TypeLabel">
 			Select restaurant option:
