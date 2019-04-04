@@ -66,11 +66,22 @@ try
 
 			function initMap() {
 			var PKI = new google.maps.LatLng(<?php echo $latLong; ?>);
-
+			var OMAHA_BOUNDS = {
+				north: 41.357508510088905,
+				south: 41.13708358693462,
+				west: -96.13591745327756,
+				east: -95.89760854672238,
+			};
 			infowindow = new google.maps.InfoWindow();
 
 			map = new google.maps.Map(
-				document.getElementById('map'), {center: PKI, zoom: 11});
+				document.getElementById('map'), {
+					center: PKI,
+					restriction: {
+						latLngBounds: OMAHA_BOUNDS,
+						strictBounds: true,
+					}, 
+					zoom: 11});
 
 			var request = {
 			  query: '<?php echo $option; ?>',
