@@ -36,7 +36,7 @@ try
 		$price = $priceArg;
 	}
 	
-	$radius = 10;
+	$radius = 16000;
 	if (isset($_COOKIE["radiusCookie"])) {
 		$radius = $_COOKIE["radiusCookie"];
 	}
@@ -70,12 +70,12 @@ try
 			infowindow = new google.maps.InfoWindow();
 
 			map = new google.maps.Map(
-				document.getElementById('map'), {center: PKI, zoom: 30});
+				document.getElementById('map'), {center: PKI, zoom: 11});
 
 			var request = {
 			  query: '<?php echo $option; ?>',
 			  location: PKI,
-			  radius: '16000',
+			  radius: '<?php echo $radius; ?>',
 			  minPriceLevel: '<?php echo $price; ?>',
 			  maxPriceLevel: '<?php echo $price; ?>'
 			};
