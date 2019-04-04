@@ -44,7 +44,7 @@ try
 	if (isset($_COOKIE["addressCookie"])) {
 		$address = $_COOKIE["addressCookie"];
 	}
-	$latLong = "41.2471, 96.0168";
+	$latLong = "41.247389, -96.016763";
 	if (isset($_COOKIE["latLongCookie"])) {
 		$latLong = $_COOKIE["latLongCookie"];
 	}
@@ -70,16 +70,19 @@ try
 			infowindow = new google.maps.InfoWindow();
 
 			map = new google.maps.Map(
-				document.getElementById('map'), {center: PKI, zoom: 15});
+				document.getElementById('map'), {center: PKI, zoom: 30});
 
 			var request = {
-			  query: '<?php echo $address; ?>',
-			  fields: ['name', 'geometry'],
+			  query: '<?php echo $option; ?>',
+			  location: PKI,
+			  radius: '16000',
+			  minPriceLevel: '<?php echo $price; ?>',
+			  maxPriceLevel: '<?php echo $price; ?>'
 			};
 
 			service = new google.maps.places.PlacesService(map);
 
-			service.findPlaceFromQuery(request, function(results, status) {
+			service.textSearch(request, function(results, status) {
 			  if (status === google.maps.places.PlacesServiceStatus.OK) {
 				for (var i = 0; i < results.length; i++) {
 				  createMarker(results[i]);
