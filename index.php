@@ -97,7 +97,7 @@ try
 				var count = 0;
 				for (var i = 0; i < results.length; i++) {
 				  createMarker(results[i]);
-				  if (map.getBounds().contains(results[i].getPosition())) {
+				  if (map.getBounds().contains(results[i].geometry.location)) {
 					  count++;
 				  }
 				}
