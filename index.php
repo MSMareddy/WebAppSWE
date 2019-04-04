@@ -75,7 +75,7 @@ try
 			var request = {
 			  query: '<?php echo $option; ?>',
 			  location: PKI,
-			  radius: '<?php echo $radius; ?>'',
+			  radius: '<?php echo $radius; ?>',
 			  minPriceLevel: '<?php echo $price; ?>',
 			  maxPriceLevel: '<?php echo $price; ?>'
 			};
