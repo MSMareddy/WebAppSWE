@@ -70,7 +70,7 @@ try
 			infowindow = new google.maps.InfoWindow();
 
 			map = new google.maps.Map(
-				document.getElementById('map'), {center: PKI, zoom: 2});
+				document.getElementById('map'), {center: PKI, zoom: 5});
 
 			var request = {
 			  query: '<?php echo $option; ?>',
