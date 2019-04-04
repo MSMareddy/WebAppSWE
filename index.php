@@ -74,14 +74,15 @@ try
 
 			var request = {
 			  query: '<?php echo $option; ?>',
-			  fields: ['name', 'geometry'],
-			  minPriceLevel: <?php echo $price; ?>,
-			  maxPriceLevel: <?php echo $price; ?>
+			  location: PKI,
+			  radius: '16000',
+			  minPriceLevel: '<?php echo $price; ?>',
+			  maxPriceLevel: '<?php echo $price; ?>'
 			};
 
 			service = new google.maps.places.PlacesService(map);
 
-			service.findPlaceFromQuery(request, function(results, status) {
+			service.textSearch(request, function(results, status) {
 			  if (status === google.maps.places.PlacesServiceStatus.OK) {
 				for (var i = 0; i < results.length; i++) {
 				  createMarker(results[i]);
