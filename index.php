@@ -63,7 +63,8 @@ try
 			var map;
 			var service;
 			var infowindow;
-
+			var count = 0;
+			
 			function initMap() {
 			var PKI = new google.maps.LatLng(<?php echo $latLong; ?>);
 			var OMAHA_BOUNDS = {
@@ -91,19 +92,31 @@ try
 			};
 
 			service = new google.maps.places.PlacesService(map);
-
+			
+			var PKI_Marker = new google.maps.Marker({
+				position: PKI,
+				map: map,
+				title: 'Peter Kiewit Institute',
+				label: 'PKI'
+			});
+			var result_bounds = new google.maps.LatLngBounds();
+			result_bounds.extend(PKI);
+			
 			service.textSearch(request, function(results, status) {
 			  if (status === google.maps.places.PlacesServiceStatus.OK) {
-				var count = 0;
 				for (var i = 0; i < results.length; i++) {
-				  createMarker(results[i]);
 				  if (map.getBounds().contains(results[i].geometry.location)) {
 					  count++;
+					  result_bounds.extend(results[i].geometry.location);
 				  }
+				  createMarker(results[i]);
 				}
 				console.log("Results within bounds: " + count);
 				if (count == 0) {
 					alert("No Places found for Restraunt type: <?php echo $option; ?> and price level: <?php echo $price; ?>\nPlease choose something else.");
+				}
+				else {
+					map.fitBounds(result_bounds);
 				}
 			  }
 			});
@@ -113,7 +126,8 @@ try
 			var marker = new google.maps.Marker({
 			  map: map,
 			  title: place.name,
-			  position: place.geometry.location
+			  position: place.geometry.location,
+			  label: count
 			});
 
 			google.maps.event.addListener(marker, 'click', function() {
