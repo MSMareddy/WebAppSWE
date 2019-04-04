@@ -103,7 +103,7 @@ try
 				}
 				console.log("Results within bounds: " + count);
 				if (count == 0) {
-					alert("No Places found for Restraunt type: "+ <?php echo $option; ?> + " and price level: " + <?php echo $price; ?>+ "\nPlease choose something else.");
+					alert("No Places found for Restraunt type: <?php echo $option; ?> and price level: <?php echo $price; ?>\nPlease choose something else.");
 				}
 			  }
 			});
