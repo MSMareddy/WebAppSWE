@@ -73,8 +73,10 @@ try
 				document.getElementById('map'), {center: PKI, zoom: 15});
 
 			var request = {
-			  query: '<?php echo $address; ?>',
+			  query: '<?php echo $option; ?>',
 			  fields: ['name', 'geometry'],
+			  minPriceLevel = <?php echo $price; ?>;
+			  maxPriceLevel = <?php echo $price; ?>;
 			};
 
 			service = new google.maps.places.PlacesService(map);
