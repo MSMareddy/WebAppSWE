@@ -17,7 +17,7 @@ try
 		if (empty($optionCookie) && empty($priceCookie)) {
 			#set elements to default values
 			$option = "pizza";
-			$price = "0";
+			$price = "1";
 		}
 		else {
 			#set element to cookie values
@@ -87,8 +87,6 @@ try
 				for (var i = 0; i < results.length; i++) {
 				  createMarker(results[i]);
 				}
-
-				map.setCenter(results[0].geometry.location);
 			  }
 			});
 			}
@@ -134,7 +132,7 @@ try
 		</div>
 
 		<div class="PriceSlider">
-			<input type="range" id = "range" name ="price" min="0" max="4" step="1" value="<?php echo $price; ?>"><br>
+			<input type="range" id = "range" name ="price" min="1" max="4" step="1" value="<?php echo $price; ?>"><br>
 			<div id ="sliderlabel"><div id="leftlabel">Cheap</div><div id="rightlabel">Expensive</div></div>
 		</div>
 		<div class="SubmitButton">
