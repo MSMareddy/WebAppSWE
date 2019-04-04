@@ -74,14 +74,13 @@ try
 			};
 			infowindow = new google.maps.InfoWindow();
 
-			map = new google.maps.Map(
-				document.getElementById('map'), {
-					center: PKI,
-					restriction: {
+			map = new google.maps.Map(document.getElementById('map'), {
+				center: PKI,
+				restriction: {
 						latLngBounds: OMAHA_BOUNDS,
-						strictBounds: true,
-					}, 
-					zoom: 11});
+						strictBounds: false,
+					},
+				zoom: 11});
 
 			var request = {
 			  query: '<?php echo $option; ?>',
@@ -95,11 +94,15 @@ try
 
 			service.textSearch(request, function(results, status) {
 			  if (status === google.maps.places.PlacesServiceStatus.OK) {
+				var count = 0;
 				for (var i = 0; i < results.length; i++) {
 				  createMarker(results[i]);
+				  if (map.getBounds().contains(results[i].getPosition())) {
+					  count++;
+				  }
 				}
-				console.log(results.length);
-				if (results.length == 0) {
+				console.log("Results within bounds: " + count);
+				if (count == 0) {
 					alert("No Places found for Restraunt type: "+ <?php echo $option; ?> + " and price level: " + <?php echo $price; ?>+ "\nPlease choose something else.");
 				}
 			  }
