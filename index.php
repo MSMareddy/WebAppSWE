@@ -75,8 +75,8 @@ try
 			var request = {
 			  query: '<?php echo $option; ?>',
 			  fields: ['name', 'geometry'],
-			  minPriceLevel = <?php echo $price; ?>,
-			  maxPriceLevel = <?php echo $price; ?>
+			  minPriceLevel: <?php echo $price; ?>,
+			  maxPriceLevel: <?php echo $price; ?>
 			};
 
 			service = new google.maps.places.PlacesService(map);
