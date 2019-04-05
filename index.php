@@ -64,8 +64,9 @@ try
 			var service;
 			var infowindow;
 			var count = 0;
-			var PKI = new google.maps.LatLng(<?php echo $latLong; ?>);
+			
 			function initMap() {
+			var PKI = new google.maps.LatLng(<?php echo $latLong; ?>);
 			var OMAHA_BOUNDS = {
 				north: 41.357508510088905,
 				south: 41.13708358693462,
@@ -125,6 +126,7 @@ try
 			}
 		
 			function createMarker(place) {
+			var PKI = new google.maps.LatLng(<?php echo $latLong; ?>);
 			var marker = new google.maps.Marker({
 			  map: map,
 			  title: place.name,
