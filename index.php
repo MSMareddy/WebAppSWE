@@ -127,12 +127,16 @@ try
 		
 			function createMarker(place) {
 			var PKI = new google.maps.LatLng(<?php echo $latLong; ?>);
+			//get diff
+			var diffInMiles = google.maps.geometry.spherical.computeDistanceBetween(PKI, place.geometry.location) * 0.000621371;
+			//convert diff to number from float and truncate digits and to string
+			var diffString = Number.parseFloat(diffInMiles).toFixed(1).toString();
 			var marker = new google.maps.Marker({
 			  map: map,
 			  title: place.name,
 			  position: place.geometry.location,
 			  label: {
-					text: google.maps.geometry.spherical.computeDistanceBetween(PKI, place.geometry.location).toString(),
+					text: diffString,
 					fontSize: '10px'
 			  }
 			});
