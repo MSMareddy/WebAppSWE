@@ -97,7 +97,10 @@ try
 				position: PKI,
 				map: map,
 				title: 'Peter Kiewit Institute',
-				label: 'PKI'
+				label: {
+					text: 'PKI',
+					fontSize: '10px'
+				},
 			});
 			var result_bounds = new google.maps.LatLngBounds();
 			result_bounds.extend(PKI);
@@ -127,7 +130,9 @@ try
 			  map: map,
 			  title: place.name,
 			  position: place.geometry.location,
-			  label: count
+			  label: {
+				  text: count.toString(),
+				  fontSize: '10px'
 			});
 
 			google.maps.event.addListener(marker, 'click', function() {
