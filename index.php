@@ -102,24 +102,17 @@ try
 					fontSize: '10px'
 				},
 			});
-			var result_bounds = new google.maps.LatLngBounds();
-			result_bounds.extend(PKI);
-			
 			service.textSearch(request, function(results, status) {
 			  if (status === google.maps.places.PlacesServiceStatus.OK) {
 				for (var i = 0; i < results.length; i++) {
 				  if (map.getBounds().contains(results[i].geometry.location)) {
 					  count++;
-					  result_bounds.extend(results[i].geometry.location);
 				  }
 				  createMarker(results[i]);
 				}
 				console.log("Results within bounds: " + count);
 				if (count == 0) {
 					alert("No Places found for Restraunt type: <?php echo $option; ?> and price level: <?php echo $price; ?>\nPlease choose something else.");
-				}
-				else {
-					map.fitBounds(result_bounds);
 				}
 			  }
 			});
