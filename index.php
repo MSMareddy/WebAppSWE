@@ -133,6 +133,7 @@ try
 			  label: {
 				  text: count.toString(),
 				  fontSize: '10px'
+			  }
 			});
 
 			google.maps.event.addListener(marker, 'click', function() {
