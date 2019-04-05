@@ -64,9 +64,8 @@ try
 			var service;
 			var infowindow;
 			var count = 0;
-			
-			function initMap() {
 			var PKI = new google.maps.LatLng(<?php echo $latLong; ?>);
+			function initMap() {
 			var OMAHA_BOUNDS = {
 				north: 41.357508510088905,
 				south: 41.13708358693462,
@@ -131,8 +130,8 @@ try
 			  title: place.name,
 			  position: place.geometry.location,
 			  label: {
-				  text: count.toString(),
-				  fontSize: '10px'
+					text: google.maps.geometry.spherical.computeDistanceBetween(PKI, place.geometry.location).toString(),
+					fontSize: '10px'
 			  }
 			});
 
@@ -155,7 +154,7 @@ try
 		<div class="Empty1"></div>
 		<div class="Map">
 			<div id="map"></div>
-			<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo getenv('API_KEY'); ?>&libraries=places&callback=initMap" async defer></script>
+			<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo getenv('API_KEY'); ?>&libraries=geometry,places&callback=initMap" async defer></script>
 		</div>
 		<div class="TypeLabel">
 			Select restaurant option:
