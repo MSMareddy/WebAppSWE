@@ -79,9 +79,9 @@ try
 				center: PKI,
 				restriction: {
 						latLngBounds: OMAHA_BOUNDS,
-						strictBounds: false,
+						strictBounds: false
 					},
-				zoom: 11});
+				zoom: 11,
                 styles: [
                     {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
                     {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
@@ -161,7 +161,7 @@ try
                         elementType: 'labels.text.stroke',
                         stylers: [{color: '#f7def7'}]
                     }
-                ]
+            });
 
 			var request = {
 			  query: '<?php echo $option; ?>',
@@ -180,7 +180,7 @@ try
 				label: {
 					text: 'PKI',
 					fontSize: '10px'
-				},
+				}
 			});
 			service.textSearch(request, function(results, status) {
 			  if (status === google.maps.places.PlacesServiceStatus.OK) {
@@ -191,7 +191,7 @@ try
 				  createMarker(results[i]);
 				}
 				console.log("Results within bounds: " + count);
-				if (count == 0) {
+				if (count === 0) {
 					alert("No Places found for Restraunt type: <?php echo $option; ?> and price level: <?php echo $price; ?>\nPlease choose something else.");
 				}
 			  }
