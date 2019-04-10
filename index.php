@@ -79,7 +79,7 @@ try
 				center: PKI,
 				restriction: {
 						latLngBounds: OMAHA_BOUNDS,
-						strictBounds: false,
+						strictBounds: false
 					},
 				zoom: 11,
                 styles: [
@@ -180,7 +180,7 @@ try
 				label: {
 					text: 'PKI',
 					fontSize: '10px'
-				},
+				}
 			});
 			service.textSearch(request, function(results, status) {
 			  if (status === google.maps.places.PlacesServiceStatus.OK) {
@@ -191,7 +191,7 @@ try
 				  createMarker(results[i]);
 				}
 				console.log("Results within bounds: " + count);
-				if (count == 0) {
+				if (count === 0) {
 					alert("No Places found for Restraunt type: <?php echo $option; ?> and price level: <?php echo $price; ?>\nPlease choose something else.");
 				}
 			  }
