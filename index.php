@@ -81,7 +81,7 @@ try
 						latLngBounds: OMAHA_BOUNDS,
 						strictBounds: false
 					},
-				zoom: 11,
+				zoom: 12,
                 styles: [
                     {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
                     {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
