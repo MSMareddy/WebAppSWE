@@ -59,6 +59,7 @@ try
 		<link rel="stylesheet" href="../../source/styles/smart.default.css" type="text/css" />
 		<link rel="stylesheet" href="../../source/styles/images" type="text/css" />
 		<script type="text/javascript" src="../../source/smart.core.js"></script>
+		<script type="text/javascript" src="../../source/smart.element.js"></script>
 		<script type="text/javascript" src="../../source/smart.button.js"></script>
 		<!-- <?php echo "Radius: ", $radius, " Address: ", $address; ?> -->
 		
