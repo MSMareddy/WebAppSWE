@@ -57,7 +57,8 @@ try
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<link rel="stylesheet" href="../../source/styles/smart.default.css" type="text/css" />
-		<script type="text/javascript" src="../../source/smart.element.js"></script>
+		<link rel="stylesheet" href="../../source/styles/images" type="text/css" />
+		<script type="text/javascript" src="../../source/smart.core.js"></script>
 		<script type="text/javascript" src="../../source/smart.button.js"></script>
 		<!-- <?php echo "Radius: ", $radius, " Address: ", $address; ?> -->
 		
