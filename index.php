@@ -241,7 +241,6 @@ try
 	<form method = "post">
 	<div class="grid-container">
 		<div class="title">
-      <h1>Find a meal!</h1>
     </div>
 		<div class="Map">
 			<div id="map"></div>

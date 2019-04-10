@@ -9,7 +9,7 @@ smart-drop-down-list {
   display: grid;
   grid-template-columns: 0.75fr 0.65fr 1.3fr 1.3fr;
   grid-template-rows: 1.4fr 0.7fr 0.7fr 0.8fr 1.4fr;
-  grid-template-areas: "title Empty1 Map Map" "TypeLabel TypeListBox Map Map" "OptionLabel PriceSlider Map Map" "SubmitButton SubmitButton Map Map" "Empty2 Empty2 Map Map";
+  grid-template-areas: "Empty1 Empty1 Map Map" "TypeLabel TypeListBox Map Map" "OptionLabel PriceSlider Map Map" "SubmitButton SubmitButton Map Map" "Empty2 Empty2 Map Map";
   margin: auto;
   height: 70vh;
   width: 83vw;
