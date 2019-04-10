@@ -57,18 +57,6 @@ try
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		
-		<!-- Smart HTML resources-->
-		<link rel="stylesheet" href="../../source/styles/smart.base.css" type="text/css" />
-		<link rel="stylesheet" href="../../source/styles/images" type="text/css" />
-		
-		<script type="text/javascript" src="webcomponents-lite.js">
-		</script>
-		<script type="text/javascript" src="../../source/smart.element.js"></script>
-		<script type="text/javascript" src="../../source/smart.core.js"></script>
-		<script type="text/javascript" src="../../source/smart.button.js"></script>
-		<script type="text/javascript" src="../../source/smart.scrollbar.js"></script>
-		<script type="text/javascript" src="../../source/smart.listbox.js"></script>
-		<script type="text/javascript" src="../../source/smart.dropdownlist.js"></script>
 		<!-- <?php echo "Radius: ", $radius, " Address: ", $address; ?> -->
 		
 		<script>
@@ -241,9 +229,9 @@ try
 	  <li><a href ="https://github.com/MSMareddy/WebAppSWE">About</a></li>
 	</ul>
 	<form method = "post">
+	<h1 id = "title">Find Cheap Restaurants!</h1>
 	<div class="grid-container">
-		<div class="title">
-    </div>
+		<div class="Empty1"></div>
 		<div class="Map">
 			<div id="map"></div>
 			<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo getenv('API_KEY'); ?>&libraries=geometry,places&callback=initMap" async defer></script>
@@ -251,26 +239,23 @@ try
 		<div class="TypeLabel">
 			Select restaurant option:
 		</div>
-		<div class="TypeListBox"; placeholder="enter">
-			<smart-drop-down-list>
-				<smart-list-item value="pizza" >Pizza</smart-list-item>
-				<smart-list-item value="hamburger" >Hamburger</smart-list-item>
-				<smart-list-item value="taco">Taco</smart-list-item>
-			</smart-drop-down-list>
+		<div class="TypeListBox">
+			<select name ="option">
+				<option value="taco" <?php if($option == "taco"){?> selected <?php }?>>Taco</option>
+				<option value="pizza" <?php if($option == "pizza"){?> selected <?php }?>>Pizza</option>
+				<option value="hamburger" <?php if($option == "hamburger"){?> selected <?php }?>>Hamburger</option>
+			</select>
 		</div>
 		<div class="OptionLabel">
 			Select price range:
 		</div>
+
 		<div class="PriceSlider">
-      <div>
-        <smart-toggle-button class="primary raised exclusive-selection"> <i name="1" value="<?php echo $price[name]; ?>" class="material-icons">$</i></smart-toggle-button>
-        <smart-toggle-button class="primary raised exclusive-selection"> <i name="2" value="<?php echo $price[name]; ?>" class="material-icons">$$</i></smart-toggle-button>
-        <smart-toggle-button class="primary raised exclusive-selection"> <i name="3" value="<?php echo $price[name]; ?>" class="material-icons">$$$</i></smart-toggle-button>
-        <smart-toggle-button class="primary  raised exclusive-selection"> <i name="4" value="<?php echo $price[name]; ?>" class="material-icons">$$$$</i></smart-toggle-button>
-      </div>
+			<input type="range" id = "range" name ="price" min="1" max="4" step="1" value="<?php echo $price; ?>"><br>
+			<div id ="sliderlabel"><div id="leftlabel">Cheap</div><div id="rightlabel">Expensive</div></div>
 		</div>
 		<div class="SubmitButton">
-        <smart-button class="raised" value="submit">Search</smart-button>
+			<input type = "submit" class = "submit" value = "Search">
 		</div>
 		<div class="Empty2"></div>
 	</div>
