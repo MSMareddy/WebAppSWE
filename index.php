@@ -65,6 +65,7 @@ try
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
 		<script type="text/javascript" src="../../source/smart.elements.js"></script>
 		<script type="text/javascript" src="../../source/smart.button.js"></script>
+		<script type="text/javascript" src="../../source/data.js></script>
 		<script src="index.js"></script>
 		<!-- <?php echo "Radius: ", $radius, " Address: ", $address; ?> -->
 		
