@@ -62,9 +62,9 @@ try
 		<link rel="stylesheet" href="../../source/styles/smart.base.css" type="text/css" />
 		<link rel="stylesheet" href="../../source/styles/images" type="text/css" />
 		
-		<script type="text/javascript" src="webcomponents-lite.js"></script>
+		<script type="text/javascript" src="webcomponents-lite.js">
+		</script>
 		<script type="text/javascript" src="../../source/smart.element.js"></script>
-		<script type="text/javascript" src="../../source/smart.core.js"></script>
 		<script type="text/javascript" src="../../source/smart.button.js"></script>
 		<script type="text/javascript" src="../../source/smart.scrollbar.js"></script>
 		<script type="text/javascript" src="../../source/smart.listbox.js"></script>
