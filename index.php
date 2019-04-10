@@ -56,6 +56,9 @@ try
 		<!-- Icon from https://gauger.io/fonticon/ -->
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<link rel="stylesheet" href="../../source/styles/smart.default.css" type="text/css" />
+		<script type="text/javascript" src="../../source/smart.element.js"></script>
+		<script type="text/javascript" src="../../source/smart.button.js"></script>
 		<!-- <?php echo "Radius: ", $radius, " Address: ", $address; ?> -->
 		
 		<script>
