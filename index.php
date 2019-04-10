@@ -161,7 +161,8 @@ try
                         elementType: 'labels.text.stroke',
                         stylers: [{color: '#f7def7'}]
                     }
-            });
+				]
+			});
 
 			var request = {
 			  query: '<?php echo $option; ?>',
