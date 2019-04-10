@@ -56,16 +56,16 @@ try
 		<!-- Icon from https://gauger.io/fonticon/ -->
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
-		<link rel="stylesheet" href="../../source/styles/smart.default.css" type="text/css" />
-		<link rel="stylesheet" type="text/css" href="../../styles/demos.css" />
-		<link rel="stylesheet" type="text/css" href="../../styles/common.css" />
+		<link rel="stylesheet" href="/source/styles/smart.default.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="/styles/demos.css" />
+		<link rel="stylesheet" type="text/css" href="/styles/common.css" />
 		<link rel="stylesheet" type="text/css" href="styles.css" />
 
-		<script type="text/javascript" src="../../scripts/common.js"></script>
+		<script type="text/javascript" src="/scripts/common.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
-		<script type="text/javascript" src="../../source/smart.elements.js"></script>
-		<script type="text/javascript" src="../../source/smart.button.js"></script>
-		<script type="text/javascript" src="../../source/data.js></script>
+		<script type="text/javascript" src="/source/smart.elements.js"></script>
+		<script type="text/javascript" src="/source/smart.button.js"></script>
+		<script type="text/javascript" src="/source/data.js></script>
 		<script src="index.js"></script>
 		<!-- <?php echo "Radius: ", $radius, " Address: ", $address; ?> -->
 		
