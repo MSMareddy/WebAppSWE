@@ -62,7 +62,6 @@ try
 		<link rel="stylesheet" type="text/css" href="styles.css" />
 
 		<script type="text/javascript" src="/scripts/common.js"></script>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
 		<script type="text/javascript" src="/source/smart.elements.js"></script>
 		<script type="text/javascript" src="/source/smart.button.js"></script>
 		<script type="text/javascript" src="/source/data.js></script>
