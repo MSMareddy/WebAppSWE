@@ -252,9 +252,9 @@ try
 		</div>
 		<div class="TypeListBox"; placeholder="enter">
 			<smart-drop-down-list>
-				<smart-list-item value="pizza" <?php if($option=="pizza" ){?> selected <?php }?>>Pizza</smart-list-item>
-				<smart-list-item value="hamburger" <?php if($option=="hamburger" ){?> selected <?php }?>>Hamburger</smart-list-item>
-				<smart-list-item value="taco" <?php if($option=="taco" ){?> selected <?php }?> >Taco</smart-list-item>
+				<smart-list-item value="pizza" >Pizza</smart-list-item>
+				<smart-list-item value="hamburger" >Hamburger</smart-list-item>
+				<smart-list-item value="taco">Taco</smart-list-item>
 			</smart-drop-down-list>
 		</div>
 		<div class="OptionLabel">
