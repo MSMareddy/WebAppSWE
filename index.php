@@ -81,7 +81,7 @@ try
 						latLngBounds: OMAHA_BOUNDS,
 						strictBounds: false,
 					},
-				zoom: 11});
+				zoom: 11,
                 styles: [
                     {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
                     {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
@@ -161,7 +161,7 @@ try
                         elementType: 'labels.text.stroke',
                         stylers: [{color: '#f7def7'}]
                     }
-                ]
+            });
 
 			var request = {
 			  query: '<?php echo $option; ?>',
