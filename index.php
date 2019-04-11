@@ -69,10 +69,11 @@ try
 			function initMap() {
 			var PKI = new google.maps.LatLng(<?php echo $latLong; ?>);
 			
-			var OMAHA_BOUNDS = new google.maps.Circle({
+			var OMAHA_CIRCLE = new google.maps.Circle({
 				center: PKI,
-				radius: '<?php echo $radius; ?>'
+				radius: parseInt('<?php echo $radius; ?>', 10)
 			});
+			var OMAHA_BOUNDS = OMAHA_CIRCLE.getBounds();
 			
 			infowindow = new google.maps.InfoWindow();
 
