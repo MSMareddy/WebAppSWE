@@ -224,7 +224,7 @@ try
 				});
 
 				google.maps.event.addListener(marker, 'click', function() {
-				  infowindow.setContent(place.name + "<br>" + place.formatted_address + "<br>" + "Distance from Home: " + diffString + "mi<br>" +
+				  infowindow.setContent(place.name + "<br>" + place.formatted_address + "<br>" + "Distance from Home: " + diffString + "mi<br>"
 				  + "<a target= '_blank' href = 'https://www.google.com/maps/search/?api=1&query=" + escape(place.name) + "&query_place_id=" + place.place_id + "'>View on Google Maps</a>");
 				  infowindow.open(map, this);
 				});
