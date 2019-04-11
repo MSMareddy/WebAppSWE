@@ -257,6 +257,7 @@ try
 				<option value="taco" <?php if($option == "taco"){?> selected <?php }?>>Taco</option>
 				<option value="pizza" <?php if($option == "pizza"){?> selected <?php }?>>Pizza</option>
 				<option value="hamburger" <?php if($option == "hamburger"){?> selected <?php }?>>Hamburger</option>
+				<option value="pasta" <?php if($option == "pasta"){?> selected <?php }?>>Pasta</option>
 			</select>
 		</div>
 		<div class="OptionLabel">
