@@ -216,10 +216,11 @@ try
 				<option value="steak" <?php if($option == "steak"){?> selected <?php }?>>Steak</option>
 				<option value="seafood" <?php if($option == "seafood"){?> selected <?php }?>>Seafood</option>
 				<option value="sushi" <?php if($option == "sushi"){?> selected <?php }?>>Sushi</option>
-				<option value="chinese" <?php if($option == "chinese"){?> selected <?php }?>>Chinese</option>
+				<option value="asian" <?php if($option == "asian"){?> selected <?php }?>>Asian</option>
 				<option value="cupcakes" <?php if($option == "cupcakes"){?> selected <?php }?>>Cupcakes</option>
 				<option value="ice cream" <?php if($option == "ice cream"){?> selected <?php }?>>Ice Cream</option>
 				<option value="chicken" <?php if($option == "chicken"){?> selected <?php }?>>Chicken</option>
+				<option value="sandwich" <?php if($option == "sandwich"){?> selected <?php }?>>Sandwich</option>
 			</select>
 		</div>
 		<div class="OptionLabel">
