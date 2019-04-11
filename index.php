@@ -99,16 +99,6 @@ try
                         stylers: [{color: '#c9d5d5'}]
                     },
                     {
-                        featureType: 'poi.park',
-                        elementType: 'geometry',
-                        stylers: [{color: '#1c32b8'}]
-                    },
-                    {
-                        featureType: 'poi.park',
-                        elementType: 'labels.text.fill',
-                        stylers: [{color: '#4fe2ee'}]
-                    },
-                    {
                         featureType: 'road',
                         elementType: 'geometry',
                         stylers: [{color: '#1dffdc'}]
@@ -137,11 +127,6 @@ try
                         featureType: 'road.highway',
                         elementType: 'labels.text.fill',
                         stylers: [{color: '#bbebf3'}]
-                    },
-                    {
-                        featureType: 'transit',
-                        elementType: 'geometry',
-                        stylers: [{color: '#ffb6e9'}]
                     },
                     {
                         featureType: 'water',
