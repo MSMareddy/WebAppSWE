@@ -141,12 +141,7 @@ try
                     {
                         featureType: 'transit',
                         elementType: 'geometry',
-                        stylers: [{color: '#fff523'}]
-                    },
-                    {
-                        featureType: 'transit.station',
-                        elementType: 'labels.text.fill',
-                        stylers: [{color: '#d57cc1'}]
+                        stylers: [{color: '#ffb6e9'}]
                     },
                     {
                         featureType: 'water',
