@@ -182,8 +182,8 @@ try
 				label: {
 					text: 'PKI',
 					fontSize: '10px'
-				},
-				icon: 'http://maps.google.com/mapfiles/kml/shapes/homegardenbusiness.png'
+				}
+				//,icon: 'http://maps.google.com/mapfiles/kml/shapes/homegardenbusiness.png'
 			});
 			service.textSearch(request, function(results, status) {
 			  if (status === google.maps.places.PlacesServiceStatus.OK) {
@@ -219,12 +219,12 @@ try
 				  label: {
 						text: diffString,
 						fontSize: '10px'
-				  },
-				  icon: 'http://maps.google.com/mapfiles/kml/pal2/icon45.png'
+				  }
+				  //,icon: 'http://maps.google.com/mapfiles/kml/pal2/icon45.png'
 				});
 
 				google.maps.event.addListener(marker, 'click', function() {
-				  infowindow.setContent(place.name + "<br>" + place.formatted_address + "<br>" + "Distance from Home: " + diffString + "<br>" +
+				  infowindow.setContent(place.name + "<br>" + place.formatted_address + "<br>" + "Distance from Home: " + diffString + "mi<br>" +
 				  + "<a target= '_blank' href = 'https://www.google.com/maps/search/?api=1&query=" + escape(place.name) + "&query_place_id=" + place.place_id + "'>View on Google Maps</a>");
 				  infowindow.open(map, this);
 				});
