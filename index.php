@@ -89,16 +89,6 @@ try
                     {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
                     {elementType: 'labels.text.fill', stylers: [{color: '#3d5574'}]},
                     {
-                        featureType: 'administrative.locality',
-                        elementType: 'labels.text.fill',
-                        stylers: [{color: '#c8cfd5'}]
-                    },
-                    {
-                        featureType: 'poi',
-                        elementType: 'labels.text.fill',
-                        stylers: [{color: '#c9d5d5'}]
-                    },
-                    {
                         featureType: 'road',
                         elementType: 'geometry',
                         stylers: [{color: '#1dffdc'}]
@@ -127,21 +117,6 @@ try
                         featureType: 'road.highway',
                         elementType: 'labels.text.fill',
                         stylers: [{color: '#bbebf3'}]
-                    },
-                    {
-                        featureType: 'water',
-                        elementType: 'geometry',
-                        stylers: [{color: '#ebebf9'}]
-                    },
-                    {
-                        featureType: 'water',
-                        elementType: 'labels.text.fill',
-                        stylers: [{color: '#9ff7e7'}]
-                    },
-                    {
-                        featureType: 'water',
-                        elementType: 'labels.text.stroke',
-                        stylers: [{color: '#f7def7'}]
                     }
 				]
 			});
