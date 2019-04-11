@@ -221,6 +221,7 @@ try
 				<option value="ice cream" <?php if($option == "ice cream"){?> selected <?php }?>>Ice Cream</option>
 				<option value="chicken" <?php if($option == "chicken"){?> selected <?php }?>>Chicken</option>
 				<option value="sandwich" <?php if($option == "sandwich"){?> selected <?php }?>>Sandwich</option>
+				<option value="buffet" <?php if($option == "buffet"){?> selected <?php }?>>Buffet</option>
 			</select>
 		</div>
 		<div class="OptionLabel">
