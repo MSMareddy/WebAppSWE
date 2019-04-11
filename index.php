@@ -141,7 +141,7 @@ try
                     {
                         featureType: 'transit',
                         elementType: 'geometry',
-                        stylers: [{color: '#482534'}]
+                        stylers: [{color: '#fff523'}]
                     },
                     {
                         featureType: 'transit.station',
