@@ -60,6 +60,7 @@ try
 		<!-- <?php echo "Radius: ", $radius, " Address: ", $address; ?> -->
 		
 		<script>
+		try {
 			var map;
 			var service;
 			var infowindow;
@@ -67,12 +68,12 @@ try
 			
 			function initMap() {
 			var PKI = new google.maps.LatLng(<?php echo $latLong; ?>);
-			var OMAHA_BOUNDS = {
-				north: 41.357508510088905,
-				south: 41.13708358693462,
-				west: -96.13591745327756,
-				east: -95.89760854672238,
-			};
+			
+			var OMAHA_BOUNDS = new google.maps.Circle({
+				center: PKI,
+				radius: '<?php echo $radius; ?>'
+			});
+			
 			infowindow = new google.maps.InfoWindow();
 
 			map = new google.maps.Map(document.getElementById('map'), {
@@ -81,7 +82,7 @@ try
 						latLngBounds: OMAHA_BOUNDS,
 						strictBounds: false
 					},
-				zoom: 12,
+				zoom: 11,
                 styles: [
                     {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
                     {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
@@ -189,7 +190,12 @@ try
 				  if (map.getBounds().contains(results[i].geometry.location)) {
 					  count++;
 				  }
-				  createMarker(results[i]);
+				  try {
+					createMarker(results[i]);
+				  }
+				  catch(addMarkerErr) {
+					console.log("Add Marker Error: " + addMarkerErr.message + " for result no: " + i + results[i].name)
+				  }
 				}
 				console.log("Results within bounds: " + count);
 				if (count === 0) {
@@ -200,27 +206,31 @@ try
 			}
 		
 			function createMarker(place) {
-			var PKI = new google.maps.LatLng(<?php echo $latLong; ?>);
-			//get diff
-			var diffInMiles = google.maps.geometry.spherical.computeDistanceBetween(PKI, place.geometry.location) * 0.000621371;
-			//convert diff to number from float and truncate digits and to string
-			var diffString = Number.parseFloat(diffInMiles).toFixed(1).toString();
-			var marker = new google.maps.Marker({
-			  map: map,
-			  title: place.name,
-			  position: place.geometry.location,
-			  label: {
-					text: diffString,
-					fontSize: '10px'
-			  }
+				var PKI = new google.maps.LatLng(<?php echo $latLong; ?>);
+				//get diff
+				var diffInMiles = google.maps.geometry.spherical.computeDistanceBetween(PKI, place.geometry.location) * 0.000621371;
+				//convert diff to number from float and truncate digits and to string
+				var diffString = Number.parseFloat(diffInMiles).toFixed(1).toString();
+				var marker = new google.maps.Marker({
+				  map: map,
+				  title: place.name,
+				  position: place.geometry.location,
+				  label: {
+						text: diffString,
+						fontSize: '10px'
+				  }
 			});
 
 			google.maps.event.addListener(marker, 'click', function() {
 			  infowindow.setContent(place.name + "<br>" + place.formatted_address + "<br>" 
-			  + "<a target= '_blank' href = 'https://www.google.com/maps/search/?api=1&query=" + escape(place.name) +"&query_place_id=" + place.place_id + "'>View on Google Maps</a>");
+			  + "<a target= '_blank' href = 'https://www.google.com/maps/search/?api=1&query=" + escape(place.name) + "&query_place_id=" + place.place_id + "'>View on Google Maps</a>");
 			  infowindow.open(map, this);
 			});
 			}
+		}
+		catch(generalError) {
+			console.log("General Error: " + generalError.message);
+		}
 		</script>
 	</head>
 <body>
