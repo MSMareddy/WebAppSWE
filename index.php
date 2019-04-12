@@ -208,9 +208,6 @@ try
 		}
 		catch(generalError) {
 			console.log("General Error: " + generalError.message);
-			var div = document.createElement('div');
-			div.innerHTML = generalError + "\n" + generalError.message;
-			document.body.appendChild(div);
 		}
 		</script>
 	</head>
@@ -263,6 +260,7 @@ try
 		<div class="Empty2"></div>
 	</div>
 	</form>
+	<?php echo $latLong; ?>
 </body>
 </html>
 <!--
