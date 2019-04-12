@@ -84,6 +84,7 @@ select {
 }
 #sliderlabel {
 	display: flex;
+	overflow: scroll;
 }
 #leftlabel {
 	float:left;
