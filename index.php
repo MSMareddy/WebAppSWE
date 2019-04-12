@@ -40,12 +40,10 @@ try
 	if (isset($_COOKIE["radiusCookie"])) {
 		$radius = $_COOKIE["radiusCookie"];
 	}
-	$address = "Peter Kiewit Institute";
-	if (isset($_COOKIE["addressCookie"])) {
-		$address = $_COOKIE["addressCookie"];
-	}
+	$address = "PKI";
 	$latLong = "41.247389, -96.016763";
 	if (isset($_COOKIE["latLongCookie"])) {
+		$address = "HOME";
 		$latLong = $_COOKIE["latLongCookie"];
 	}
 ?>
@@ -61,38 +59,38 @@ try
 		<!-- <?php echo "Radius: ", $radius, " Address: ", $address; ?> -->
 		
 		<script>
-		window.onload = function(){
-			document.getElementById("getLocation").onclick = function() {
-				if (navigator.geolocation) {
-					if (confirm("Do you want to change to current location?")) {
-						navigator.geolocation.getCurrentPosition(showPosition);
-					}
-				} 
-				else {
-					alert("Geolocation is not supported by this browser.");
-				}
-				return false;
-			}
-			function showPosition(position) {
-				var currLocation = position.coords.latitude + ", " + position.coords.longitude;
-				var d = new Date();
-				d.setTime(d.getTime() + (7*24*60*60*1000));
-				var expires = "expires="+ d.toUTCString();
-				document.cookie = "latLongCookie=" + currLocation + ";" + expires + ";path=/";
-				location.reload(true);
-			}
-		}
 		try {
+			window.onload = function(){
+				document.getElementById("getLocation").onclick = function() {
+					if (navigator.geolocation) {
+						if (confirm("Do you want to change to current location?")) {
+							navigator.geolocation.getCurrentPosition(showPosition);
+						}
+					} 
+					else {
+						alert("Geolocation is not supported by this browser.");
+					}
+					return false;
+				}
+				function showPosition(position) {
+					var currLocation = position.coords.latitude + ", " + position.coords.longitude;
+					var d = new Date();
+					d.setTime(d.getTime() + (7*24*60*60*1000));
+					var expires = "expires="+ d.toUTCString();
+					document.cookie = "latLongCookie=" + currLocation + ";" + expires + ";path=/";
+					location.reload(true);
+				}
+			}
 			var map;
 			var service;
 			var infowindow;
 			var count = 0;
 			
 			function initMap() {
-			var PKI = new google.maps.LatLng(<?php echo $latLong; ?>);
+			var home = new google.maps.LatLng(<?php echo $latLong; ?>);
 			
 			var OMAHA_CIRCLE = new google.maps.Circle({
-				center: PKI,
+				center: home,
 				radius: parseInt('<?php echo $radius; ?>', 10)
 			});
 			var OMAHA_BOUNDS = OMAHA_CIRCLE.getBounds();
@@ -100,7 +98,7 @@ try
 			infowindow = new google.maps.InfoWindow();
 
 			map = new google.maps.Map(document.getElementById('map'), {
-				center: PKI,
+				center: home,
 				restriction: {
 						latLngBounds: OMAHA_BOUNDS,
 						strictBounds: false
@@ -145,7 +143,7 @@ try
 
 			var request = {
 			  query: '<?php echo $option; ?>',
-			  location: PKI,
+			  location: home,
 			  radius: '<?php echo $radius; ?>',
 			  minPriceLevel: '<?php echo $price; ?>',
 			  maxPriceLevel: '<?php echo $price; ?>'
@@ -153,12 +151,12 @@ try
 
 			service = new google.maps.places.PlacesService(map);
 			
-			var PKI_Marker = new google.maps.Marker({
-				position: PKI,
+			var HOME_MARKER = new google.maps.Marker({
+				position: home,
 				map: map,
-				title: 'Peter Kiewit Institute',
+				title: '<?php echo $address; ?>',
 				label: {
-					text: 'PKI',
+					text: '<?php echo $address; ?>',
 					fontSize: '10px'
 				}
 				//,icon: 'http://maps.google.com/mapfiles/kml/shapes/homegardenbusiness.png'
@@ -185,9 +183,9 @@ try
 			}
 		
 			function createMarker(place) {
-				var PKI = new google.maps.LatLng(<?php echo $latLong; ?>);
+				var home = new google.maps.LatLng(<?php echo $latLong; ?>);
 				//get diff
-				var diffInMiles = google.maps.geometry.spherical.computeDistanceBetween(PKI, place.geometry.location) * 0.000621371;
+				var diffInMiles = google.maps.geometry.spherical.computeDistanceBetween(home, place.geometry.location) * 0.000621371;
 				//convert diff to number from float and truncate digits and to string
 				var diffString = Number.parseFloat(diffInMiles).toFixed(1).toString();
 				var marker = new google.maps.Marker({
@@ -202,7 +200,7 @@ try
 				});
 
 				google.maps.event.addListener(marker, 'click', function() {
-				  infowindow.setContent(place.name + "<br>" + place.formatted_address + "<br>" + "Distance from PKI: " + diffString + "mi<br>"
+				  infowindow.setContent(place.name + "<br>" + place.formatted_address + "<br>" + "Distance from <?php echo $address; ?>: " + diffString + "mi<br>"
 				  + "<a target= '_blank' href = 'https://www.google.com/maps/search/?api=1&query=" + escape(place.name) + "&query_place_id=" + place.place_id + "'>View on Google Maps</a>");
 				  infowindow.open(map, this);
 				});
@@ -210,6 +208,9 @@ try
 		}
 		catch(generalError) {
 			console.log("General Error: " + generalError.message);
+			var div = document.createElement('div');
+			div.innerHTML = generalError + "\n" + generalError.message;
+			document.body.appendChild(div);
 		}
 		</script>
 	</head>
