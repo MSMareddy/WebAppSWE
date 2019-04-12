@@ -159,7 +159,7 @@ try
 				title: '<?php echo $address; ?>',
 				label: {
 					text: '<?php echo $address; ?>',
-					fontSize: '10px'
+					fontSize: '7.5px'
 				}
 				//,icon: 'http://maps.google.com/mapfiles/kml/shapes/homegardenbusiness.png'
 			});
