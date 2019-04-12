@@ -232,7 +232,7 @@ try
 
 		<div class="PriceSlider">
 			<input type="range" id = "range" name ="price" min="1" max="4" step="1" value="<?php echo $price; ?>"><br>
-			<div id ="sliderlabel"><div id="leftlabel">Cheap</div><div id="rightlabel">Expensive</div></div>
+			<div id ="sliderlabel"><div id="leftlabel">Cheap</div><div id="rightlabel">&nbsp;Expensive</div></div>
 		</div>
 		<div class="SubmitButton">
 			<input type = "submit" class = "submit hvr-grow" value = "Search">

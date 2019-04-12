@@ -83,7 +83,6 @@ select {
 
 }
 #sliderlabel {
-    font-size: calc(10px + (16 - 10) * ((100vw - 300px) / (1600 - 300)));
 	display: flex;
 }
 #leftlabel {
