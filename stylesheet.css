@@ -9,6 +9,28 @@
   width: 83vw;
 }
 
+/*Animation Framework*/
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
 .Map { grid-area: Map; }
 
 .Empty1 { grid-area: Empty1; }
@@ -41,6 +63,8 @@ select {
 }
 #title {
 	text-align: left;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
 }
 #mapele {
 	width: 300px; 
