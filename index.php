@@ -235,7 +235,7 @@ try
 			<div id ="sliderlabel"><div id="leftlabel">Cheap</div><div id="rightlabel">Expensive</div></div>
 		</div>
 		<div class="SubmitButton">
-			<input type = "submit" class = "submit" value = "Search">
+			<input type = "submit" class = "submit hvr-sweep-to-right" value = "Search">
 		</div>
 		<div class="Empty2"></div>
 	</div>
