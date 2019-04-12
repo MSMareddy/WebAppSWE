@@ -62,7 +62,7 @@ select {
 	display: block;
 }
 #title {
-	text-align: left;
+	text-align: center;
 	-webkit-animation-name: fadeIn;
 	animation-name: fadeIn;
 }
