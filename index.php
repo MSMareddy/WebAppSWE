@@ -202,7 +202,7 @@ try
 	<div class="grid-container">
 		<div class="Empty1"></div>
 		<div class="Map">
-			<div class="animated fadeIn" id="map"></div>
+			<div id="map"></div>
 			<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo getenv('API_KEY'); ?>&libraries=geometry,places&callback=initMap" async defer></script>
 		</div>
 		<div class="animated fadeIn" class="TypeLabel">
