@@ -1,6 +1,7 @@
 /*https://grid.layoutit.com/ */
 .grid-container {
   display: grid;
+  padding-top: 5vh;
   grid-template-columns: 0.75fr 0.65fr 1.3fr 1.3fr;
   grid-template-rows: 1.4fr 0.7fr 0.7fr 0.8fr 1.4fr;
   grid-template-areas: "Empty1 Empty1 Map Map" "TypeLabel TypeListBox Map Map" "OptionLabel PriceSlider Map Map" "SubmitButton SubmitButton Map Map" "Empty2 Empty2 Map Map";
@@ -9,9 +10,14 @@
   width: 83vw;
 }
 
+@media screen and (orientation: portrait) {
+  .grid-container {
+	height: 30vh;
+	width: 90vw;
+  }
+}
 
-
-.Map { grid-area: Map; }
+.Map { grid-area: Map; padding: 1vh;}
 
 .Empty1 { grid-area: Empty1; }
 
@@ -77,6 +83,7 @@ select {
 
 }
 #sliderlabel {
+    font-size: calc(10px + (16 - 10) * ((100vw - 300px) / (1600 - 300)));
 	display: flex;
 }
 #leftlabel {
