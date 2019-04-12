@@ -202,13 +202,13 @@ try
 	<div class="grid-container">
 		<div class="Empty1"></div>
 		<div class="Map">
-			<div id="map"></div>
+			<div class="animated fadeIn" id="map"></div>
 			<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo getenv('API_KEY'); ?>&libraries=geometry,places&callback=initMap" async defer></script>
 		</div>
-		<div class="TypeLabel">
+		<div class="animated fadeIn" class="TypeLabel">
 			Select restaurant option:
 		</div>
-		<div class="TypeListBox">
+		<div class="animated fadeIn" class="TypeListBox">
 			<select name ="option">
 				<option value="taco" <?php if($option == "taco"){?> selected <?php }?>>Taco</option>
 				<option value="pizza" <?php if($option == "pizza"){?> selected <?php }?>>Pizza</option>
@@ -225,15 +225,15 @@ try
 				<option value="buffet" <?php if($option == "buffet"){?> selected <?php }?>>Buffet</option>
 			</select>
 		</div>
-		<div class="OptionLabel">
+		<div class="animated fadeIn" class="OptionLabel">
 			Select price range:
 		</div>
 
-		<div class="PriceSlider">
+		<div class="animated fadeIn" class="PriceSlider">
 			<input type="range" id = "range" name ="price" min="1" max="4" step="1" value="<?php echo $price; ?>"><br>
 			<div id ="sliderlabel"><div id="leftlabel">Cheap</div><div id="rightlabel">Expensive</div></div>
 		</div>
-		<div class="SubmitButton">
+		<div class="animated fadeIn" class="SubmitButton">
 			<input type = "submit" class = "submit" value = "Search">
 		</div>
 		<div class="Empty2"></div>
