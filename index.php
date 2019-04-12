@@ -73,7 +73,9 @@ try
 					return false;
 				}
 				function showPosition(position) {
-					var currLocation = position.coords.latitude + ", " + position.coords.longitude;
+					var currLocation = position.coords.latitude;
+					currLocation += ", ";
+					currLocation += position.coords.longitude;
 					var d = new Date();
 					d.setTime(d.getTime() + (7*24*60*60*1000));
 					var expires = "expires="+ d.toUTCString();
