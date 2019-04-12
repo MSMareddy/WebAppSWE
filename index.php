@@ -56,7 +56,8 @@ try
 		<!-- Icon from https://gauger.io/fonticon/ -->
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
-		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+		  
 		<!-- <?php echo "Radius: ", $radius, " Address: ", $address; ?> -->
 		
 		<script>
@@ -197,7 +198,7 @@ try
 	  <li><a href ="https://github.com/MSMareddy/WebAppSWE">About</a></li>
 	</ul>
 	<form method = "post">
-	<h1 id = "title">Find Cheap Restaurants!</h1>
+	<h1 class="animated fadeIn" id = "title">Find Cheap Restaurants!</h1>
 	<div class="grid-container">
 		<div class="Empty1"></div>
 		<div class="Map">
