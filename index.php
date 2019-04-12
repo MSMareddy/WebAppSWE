@@ -61,6 +61,27 @@ try
 		<!-- <?php echo "Radius: ", $radius, " Address: ", $address; ?> -->
 		
 		<script>
+		window.onload = function(){
+			document.getElementById("getLocation").onclick = function() {
+				if (navigator.geolocation) {
+					if (confirm("Do you want to change to current location?")) {
+						navigator.geolocation.getCurrentPosition(showPosition);
+					}
+				} 
+				else {
+					alert("Geolocation is not supported by this browser.");
+				}
+				return false;
+			}
+			function showPosition(position) {
+				var currLocation = position.coords.latitude + ", " + position.coords.longitude;
+				var d = new Date();
+				d.setTime(d.getTime() + (7*24*60*60*1000));
+				var expires = "expires="+ d.toUTCString();
+				document.cookie = "latLongCookie=" + currLocation + ";" + expires + ";path=/";
+				location.reload(true);
+			}
+		}
 		try {
 			var map;
 			var service;
@@ -195,6 +216,7 @@ try
 <body>
 	<ul>
 	  <li><a class="active" href="/">Home</a></li>
+	  <li><a id="getLocation" href="/">Change Location</a></li>
 	  <li><a href ="https://github.com/MSMareddy/WebAppSWE">About</a></li>
 	</ul>
 	<form method = "post">
