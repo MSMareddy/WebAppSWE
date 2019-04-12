@@ -81,7 +81,7 @@ try
 					var expires = "expires="+ d.toUTCString();
 					document.cookie = "latLongCookie=" + currLocation + ";" + expires + ";path=/";
 					var div = document.createElement('div');
-					div.innerHTML = currLocation;
+					div.innerHTML = "latLongCookie=" + currLocation + ";" + expires + ";path=/";
 					document.body.appendChild(div);
 					//location.reload(true);
 				}
