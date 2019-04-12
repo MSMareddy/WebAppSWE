@@ -77,7 +77,7 @@ select {
 	height: 26px;
 	width: 100%;
 }
-.submit {
+/*.submit {
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
@@ -85,6 +85,7 @@ select {
 	margin: auto;
 	display: block;
 }
+*/
 #title {
 	text-align: left;
 
