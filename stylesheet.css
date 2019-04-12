@@ -53,7 +53,7 @@ select {
 	width: 100%;
 }
 .submit {
-  background-color: gray;
+  background-color: #0099cc;
   border: none;
   color: white;
   padding: 16px 32px;
