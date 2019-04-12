@@ -73,8 +73,6 @@ try
 					return false;
 				}
 				function showPosition(position) {
-					var div = document.createElement('div');
-					div.innerHTML = document.cookie;
 					var lat = String(position.coords.latitude).substring(0,8);
 					var lng = String(position.coords.longitude).substring(0,8);
 					var d = new Date();
@@ -82,8 +80,7 @@ try
 					var expires = "expires="+ d.toUTCString();
 					document.cookie = "latCookie=" + lat + ";" + expires + ";path=/";
 					document.cookie = "longCookie=" + lng + ";" + expires + ";path=/";
-					document.body.appendChild(div);
-					//location.reload(true);
+					location.reload(true);
 				}
 			}
 			var map;
@@ -265,7 +262,6 @@ try
 		<div class="Empty2"></div>
 	</div>
 	</form>
-	<?php echo $latLong; ?>
 </body>
 </html>
 <!--
