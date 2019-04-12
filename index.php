@@ -199,8 +199,9 @@ try
 	</ul>
 	<form method = "post">
 	<div class="grid-container">
-		<div class="Empty1"></div>
+		<div class="Empty1">
 			<h1 class="animated fadeIn" id = "title">Find Cheap Restaurants!</h1>
+		</div>
 		<div class="Map">
 			<div id="map"></div>
 			<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo getenv('API_KEY'); ?>&libraries=geometry,places&callback=initMap" async defer></script>
