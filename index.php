@@ -198,9 +198,9 @@ try
 	  <li><a href ="https://github.com/MSMareddy/WebAppSWE">About</a></li>
 	</ul>
 	<form method = "post">
-	<h1 class="animated fadeIn" id = "title">Find Cheap Restaurants!</h1>
 	<div class="grid-container">
 		<div class="Empty1"></div>
+			<h1 class="animated fadeIn" id = "title">Find Cheap Restaurants!</h1>
 		<div class="Map">
 			<div id="map"></div>
 			<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo getenv('API_KEY'); ?>&libraries=geometry,places&callback=initMap" async defer></script>
