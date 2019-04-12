@@ -83,7 +83,7 @@ try
 					var div = document.createElement('div');
 					div.innerHTML = currLocation;
 					document.body.appendChild(div);
-					location.reload(true);
+					//location.reload(true);
 				}
 			}
 			var map;
