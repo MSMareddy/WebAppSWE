@@ -80,7 +80,10 @@ try
 					d.setTime(d.getTime() + (7*24*60*60*1000));
 					var expires = "expires="+ d.toUTCString();
 					document.cookie = "latLongCookie=" + currLocation + ";" + expires + ";path=/";
-					//location.reload(true);
+					var div = document.createElement('div');
+					div.innerHTML = currLocation;
+					document.body.appendChild(div);
+					location.reload(true);
 				}
 			}
 			var map;
