@@ -42,9 +42,9 @@ try
 	}
 	$address = "PKI";
 	$latLong = "41.247389, -96.016763";
-	if (isset($_COOKIE["latLongCookie"])) {
+	if (isset($_COOKIE["latCookie"]) && isset($_COOKIE["longCookie"])) {
 		$address = "HOME";
-		$latLong = $_COOKIE["latLongCookie"];
+		$latLong = $_COOKIE["latCookie"] . ", " . $_COOKIE["longCookie"];
 	}
 ?>
 <html lang = "en">
@@ -75,14 +75,13 @@ try
 				function showPosition(position) {
 					var div = document.createElement('div');
 					div.innerHTML = document.cookie;
-					var currLocation = String(position.coords.latitude).substring(0,8);
-					currLocation += ", ";
-					currLocation += String(position.coords.longitude).substring(0,8);
+					var lat = String(position.coords.latitude).substring(0,8);
+					var lng = String(position.coords.longitude).substring(0,8);
 					var d = new Date();
 					d.setTime(d.getTime() + (7*24*60*60*1000));
 					var expires = "expires="+ d.toUTCString();
-					document.cookie = "latLongCookie=" + currLocation + ";" + expires + ";path=/";
-					div.innerHTML += "latLongCookie=" + currLocation + ";" + expires + ";path=/";
+					document.cookie = "latCookie=" + lat + ";" + expires + ";path=/";
+					document.cookie = "longCookie=" + lng + ";" + expires + ";path=/";
 					document.body.appendChild(div);
 					//location.reload(true);
 				}
