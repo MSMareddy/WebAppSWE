@@ -73,6 +73,8 @@ try
 					return false;
 				}
 				function showPosition(position) {
+					var div = document.createElement('div');
+					div.innerHTML = document.cookie;
 					var currLocation = String(position.coords.latitude).substring(0,8);
 					currLocation += ", ";
 					currLocation += String(position.coords.longitude).substring(0,8);
@@ -80,8 +82,7 @@ try
 					d.setTime(d.getTime() + (7*24*60*60*1000));
 					var expires = "expires="+ d.toUTCString();
 					document.cookie = "latLongCookie=" + currLocation + ";" + expires + ";path=/";
-					var div = document.createElement('div');
-					div.innerHTML = "latLongCookie=" + currLocation + ";" + expires + ";path=/";
+					div.innerHTML += "latLongCookie=" + currLocation + ";" + expires + ";path=/";
 					document.body.appendChild(div);
 					//location.reload(true);
 				}
