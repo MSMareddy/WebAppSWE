@@ -205,10 +205,10 @@ try
 			<div id="map"></div>
 			<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo getenv('API_KEY'); ?>&libraries=geometry,places&callback=initMap" async defer></script>
 		</div>
-		<div class="animated fadeIn" class="TypeLabel">
+		<div class="TypeLabel">
 			Select restaurant option:
 		</div>
-		<div class="animated fadeIn" class="TypeListBox">
+		<div class="TypeListBox">
 			<select name ="option">
 				<option value="taco" <?php if($option == "taco"){?> selected <?php }?>>Taco</option>
 				<option value="pizza" <?php if($option == "pizza"){?> selected <?php }?>>Pizza</option>
@@ -225,15 +225,15 @@ try
 				<option value="buffet" <?php if($option == "buffet"){?> selected <?php }?>>Buffet</option>
 			</select>
 		</div>
-		<div class="animated fadeIn" class="OptionLabel">
+		<div  class="OptionLabel">
 			Select price range:
 		</div>
 
-		<div class="animated fadeIn" class="PriceSlider">
+		<div class="PriceSlider">
 			<input type="range" id = "range" name ="price" min="1" max="4" step="1" value="<?php echo $price; ?>"><br>
 			<div id ="sliderlabel"><div id="leftlabel">Cheap</div><div id="rightlabel">Expensive</div></div>
 		</div>
-		<div class="animated fadeIn" class="SubmitButton">
+		<div class="SubmitButton">
 			<input type = "submit" class = "submit" value = "Search">
 		</div>
 		<div class="Empty2"></div>
