@@ -9,14 +9,6 @@
   height: 70vh;
   width: 83vw;
 }
-
-@media screen and (orientation: portrait) {
-  .grid-container {
-	height: 30vh;
-	width: 90vw;
-  }
-}
-
 .Map { grid-area: Map; padding: 1vh;}
 
 .Empty1 { grid-area: Empty1; }
@@ -32,6 +24,20 @@
 .TypeListBox { grid-area: TypeListBox; width: 10vw;}
 
 .PriceSlider { grid-area: PriceSlider; width: 10vw;}
+
+@media screen and (orientation: portrait) {
+  .grid-container {
+	  display: grid;
+	  grid-template-columns: 1fr 1fr;
+	  grid-template-rows: 0.3fr 0.2fr 0.2fr 0.3fr 2.5fr;
+	  grid-template-areas: "Empty1 Empty1" "TypeLabel TypeListBox" "OptionLabel PriceSlider" "SubmitButton SubmitButton" "Map Map";
+	  height: 66vh;
+	  width: 80vw;
+  }
+  .TypeListBox { width: 50%;}
+
+  .PriceSlider { width: 50%;}
+}
 
 .hvr-grow {
   display: inline-block;
