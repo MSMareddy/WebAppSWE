@@ -64,7 +64,7 @@ try
 				document.getElementById("getLocation").onclick = function() {
 					if (navigator.geolocation) {
 						if (confirm("Do you want to change to current location?")) {
-							navigator.geolocation.getCurrentPosition(showPosition);
+							navigator.geolocation.getCurrentPosition(showPosition, error);
 						}
 					} 
 					else {
@@ -81,6 +81,9 @@ try
 					document.cookie = "latCookie=" + lat + ";" + expires + ";path=/";
 					document.cookie = "longCookie=" + lng + ";" + expires + ";path=/";
 					location.reload(true);
+				}
+				function error(err) {
+					alert("Location Error: " + err.message);
 				}
 			}
 			var map;
