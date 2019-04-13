@@ -83,8 +83,8 @@ try
 					},
 				zoom: 12,
                 styles: [
-                    {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
-                    {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+                    {elementType: 'geometry', stylers: [{color: '#9bbeda'}]},
+                    {elementType: 'labels.text.stroke', stylers: [{color: '#49fbff'}]},
                     {elementType: 'labels.text.fill', stylers: [{color: '#3d5574'}]},
                     {
                         featureType: 'administrative.locality',
