@@ -43,7 +43,7 @@ try
 	$address = "PKI";
 	$latLong = "41.247389, -96.016763";
 	if (isset($_COOKIE["latCookie"]) && isset($_COOKIE["longCookie"])) {
-		$address = "HOME";
+		$address = "Home";
 		$latLong = $_COOKIE["latCookie"] . ", " . $_COOKIE["longCookie"];
 	}
 ?>
@@ -157,11 +157,14 @@ try
 				position: home,
 				map: map,
 				title: '<?php echo $address; ?>',
+				<?php if($address == "Home") {?> 
+				icon: 'home.png',
+				<?php } else {?>
 				label: {
 					text: '<?php echo $address; ?>',
-					fontSize: '7.5px'
-				}
-				//,icon: 'http://maps.google.com/mapfiles/kml/shapes/homegardenbusiness.png'
+					fontSize: '10px'
+				},
+				<?php } ?>
 			});
 			service.textSearch(request, function(results, status) {
 			  if (status === google.maps.places.PlacesServiceStatus.OK) {
@@ -202,7 +205,7 @@ try
 				});
 
 				google.maps.event.addListener(marker, 'click', function() {
-				  infowindow.setContent(place.name + "<br>" + place.formatted_address + "<br>" + "Distance from <?php echo $address; ?>: " + diffString + "mi<br>"
+				  infowindow.setContent(place.name + "<br>" + place.formatted_address + "<br>" + "Approx Distance from <?php echo $address; ?>: " + diffString + "mi<br>"
 				  + "<a target= '_blank' href = 'https://www.google.com/maps/search/?api=1&query=" + escape(place.name) + "&query_place_id=" + place.place_id + "'>View on Google Maps</a>");
 				  infowindow.open(map, this);
 				});
