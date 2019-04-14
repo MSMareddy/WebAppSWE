@@ -238,14 +238,12 @@ try
 		<div class="TypeLabel">
 			Select restaurant option:
 		</div>
-		<div class="TypeListBox">
-			<div id="dd" class="wrapper-dropdown-3" tabindex="1">
+		<div id="dd" class="wrapper-dropdown-3 TypeListBox" tabindex="1">
 				<span>Food</span>
 				<ul class="dropdown">	
 					<li><a href="#"><i class="icon-envelope icon-large"></i>Classic mail</a></li>
 					<li><a href="#"><i class="icon-truck icon-large"></i>UPS Delivery</a></li>
 					<li><a href="#"><i class="icon-plane icon-large"></i>Private jet</a></li>
-			</div>
 		</div>
 		
 		<div  class="OptionLabel">
