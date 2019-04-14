@@ -241,11 +241,7 @@ try
 		<div class="TypeListBox">
 			<div id="dd" class="wrapper-dropdown-3" tabindex="1">
 				<span>Food</span>
-				<ul class="dropdown">
-					<li><a href="#"><i class="icon-envelope icon-large"></i>Classic mail</a></li>
-					<li><a href="#"><i class="icon-truck icon-large"></i>UPS Delivery</a></li>
-					<li><a href="#"><i class="icon-plane icon-large"></i>Private jet</a></li>
-					
+				<ul class="dropdown">				
 					<select name ="option">
 						<option value="taco" <?php if($option == "taco"){?> selected <?php }?>>Taco</option>
 						<option value="pizza" <?php if($option == "pizza"){?> selected <?php }?>>Pizza</option>
