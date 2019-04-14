@@ -244,6 +244,7 @@ try
 					<li><a href="#"><i class="icon-envelope icon-large"></i>Classic mail</a></li>
 					<li><a href="#"><i class="icon-truck icon-large"></i>UPS Delivery</a></li>
 					<li><a href="#"><i class="icon-plane icon-large"></i>Private jet</a></li>
+				</ul>
 		</div>
 		
 		<div  class="OptionLabel">
