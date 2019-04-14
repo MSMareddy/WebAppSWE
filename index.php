@@ -239,7 +239,7 @@ try
 			Select restaurant option:
 		</div>
 		<div class="TypeListBox">
-			<div id="dd" class="wrapper-dropdown-3" tabindex"1">
+			<div id="dd" class="wrapper-dropdown-3" tabindex="1">
 				<span>Food</span>
 				<ul class="dropdown">
 					<li><a href="#"><i class="icon-envelope icon-large"></i>Classic mail</a></li>
