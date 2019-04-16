@@ -239,8 +239,7 @@ try
 		<div class="TypeLabel">
 			Select restaurant option:
 		</div>
-		<div class="TypeListBox">
-			<div id="dd" class="wrapper-dropdown-3" tabindex="1">
+			<div id="dd" class="wrapper-dropdown-3 TypeListBox" tabindex="1">
 			<span>Transport</span>
 				<ul class="dropdown">
 					<li><a href="#">Private jet</a></li>
@@ -248,7 +247,6 @@ try
 					<li><a href="#">Private jet</a></li>
 				</ul>
 			</div>
-		</div>
 		<div  class="OptionLabel">
 			Select price range:
 		</div>
