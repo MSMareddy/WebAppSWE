@@ -55,9 +55,7 @@ try
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		 
+		  
 		<!-- <?php echo "Radius: ", $radius, " Address: ", $address; ?> -->
 		
 		<script>
@@ -220,52 +218,7 @@ try
 			console.log("General Error: " + generalError.message);
 		}
 		</script>
-		
-		<script type="text/javascript">
-					function DropDown(el) {
-				this.dd = el;
-				this.placeholder = this.dd.children('span');
-				this.opts = this.dd.find('ul.dropdown > li');
-				this.val = '';
-				this.index = -1;
-				this.initEvents();
-			}
-			DropDown.prototype = {
-				initEvents : function() {
-					var obj = this;
-
-					obj.dd.on('click', function(event){
-						$(this).toggleClass('active');
-						return false;
-					});
-
-					obj.opts.on('click',function(){
-						var opt = $(this);
-						obj.val = opt.text();
-						obj.index = opt.index();
-						obj.placeholder.text(obj.val);
-					});
-				},
-				getValue : function() {
-					return this.val;
-				},
-				getIndex : function() {
-					return this.index;
-				}
-			}
-			$(function() {
-
-				var dd = new DropDown( $('#dd') );
-
-				$(document).click(function() {
-					// all dropdowns
-				$('.wrapper-dropdown-3').removeClass('active');
-				});
-
-			});
-		</script>
 	</head>
-	
 <body>
 	<ul>
 	  <li><a class="active" href="/">Home</a></li>
@@ -275,7 +228,7 @@ try
 	<form method = "post">
 	<div class="grid-container">
 		<div class="Empty1">
-			<h1 class="animated fadeIn" id = "title">Find Cheap Restaurants!</h1>
+			<h1 class="animated fadeIn" id = "title">Restaurant Locator</h1>
 		</div>
 		<div class="Map">
 			<div id="map"></div>
@@ -285,15 +238,21 @@ try
 			Select restaurant option:
 		</div>
 		<div class="TypeListBox">
-			<div id="dd" class="wrapper-dropdown-3" tabindex="1">
-			<span>Food</span>
-				<ul class="dropdown">
-					<li><a href="#"><i class="fas fa-pizza-slice"></i></i>Pizza</a></li>
-					<li><a href="#"><i class="fas fa-pepper-hot"></i></i>Mexican</a></li>
-					<li><a href="#"><i class="fas fa-hamburger"></i></i>Burgers</a></li>
-					
-				</ul>
-			</div>
+			<select name ="option">
+				<option value="buffet" <?php if($option == "buffet"){?> selected <?php }?>>Buffet</option>
+				<option value="chicken" <?php if($option == "chicken"){?> selected <?php }?>>Chicken</option>
+				<option value="chinese food" <?php if($option == "chinese food"){?> selected <?php }?>>Chinese</option>
+				<option value="cupcakes" <?php if($option == "cupcakes"){?> selected <?php }?>>Cupcakes</option>
+				<option value="hamburger" <?php if($option == "hamburger"){?> selected <?php }?>>Hamburger</option>
+				<option value="ice cream" <?php if($option == "ice cream"){?> selected <?php }?>>Ice Cream</option>
+				<option value="pasta" <?php if($option == "pasta"){?> selected <?php }?>>Pasta</option>
+				<option value="pizza" <?php if($option == "pizza"){?> selected <?php }?>>Pizza</option>
+				<option value="sandwich" <?php if($option == "sandwich"){?> selected <?php }?>>Sandwich</option>
+				<option value="seafood" <?php if($option == "seafood"){?> selected <?php }?>>Seafood</option>
+				<option value="steak" <?php if($option == "steak"){?> selected <?php }?>>Steak</option>
+				<option value="sushi" <?php if($option == "sushi"){?> selected <?php }?>>Sushi</option>
+				<option value="taco" <?php if($option == "taco"){?> selected <?php }?>>Taco</option>
+			</select>
 		</div>
 		<div  class="OptionLabel">
 			Select price range:
