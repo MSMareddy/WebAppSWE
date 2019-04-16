@@ -214,6 +214,16 @@ li a.active {
   background-color: #4CAF50;
 }
 
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 .wrapper-dropdown-3 {
     /* Size and position */
     position: relative;
@@ -260,55 +270,16 @@ li a.active {
     border: 1px solid rgba(0,0,0,0.17);
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
     font-weight: normal;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
     transition: all 0.5s ease-in;
     list-style: none;
 
     /* Hiding */
     opacity: 0;
     pointer-events: none;
-}
-
-.wrapper-dropdown-3 .dropdown li a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: #8aa8bd;
-    border-bottom: 1px solid #e6e8ea;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,1);
-    transition: all 0.3s ease-out;
-}
-
-.wrapper-dropdown-3 .dropdown li i {
-    float: right;
-    color: inherit;
-}
-
-.wrapper-dropdown-3 .dropdown li:first-of-type a {
-    border-radius: 7px 7px 0 0;
-}
-
-.wrapper-dropdown-3 .dropdown li:last-of-type a {
-    border-radius: 0 0 7px 7px;
-    border: none;
-}
-
-/* Hover state */
-
-.wrapper-dropdown-3 .dropdown li:hover a {
-    background: #f3f8f8;
-}
-
-
-.wrapper-dropdown-3 .dropdown:before {
-    content: "";
-    width: 0;
-    height: 0;
-    position: absolute;
-    bottom: 100%;
-    right: 13px;
-    border-width: 0 8px 8px 8px;
-    border-style: solid;
-    border-color: rgba(0,0,0,0.1) transparent;    
 }
 
 .wrapper-dropdown-3 .dropdown:after {
@@ -335,7 +306,57 @@ li a.active {
     border-color: rgba(0,0,0,0.1) transparent;    
 }
 
+.wrapper-dropdown-3 .dropdown li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #8aa8bd;
+    border-bottom: 1px solid #e6e8ea;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,1);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper-dropdown-3 .dropdown li i {
+    float: right;
+    color: inherit;
+}
+
+.wrapper-dropdown-3 .dropdown li:first-of-type a {
+    border-radius: 7px 7px 0 0;
+}
+
+.wrapper-dropdown-3 .dropdown li:last-of-type a {
+    border: none;
+    border-radius: 0 0 7px 7px;
+}
+
+/* Hover state */
+
+.wrapper-dropdown-3 .dropdown li:hover a {
+    background: #f3f8f8;
+}
+
+/* Active state */
+
 .wrapper-dropdown-3.active .dropdown {
     opacity: 1;
     pointer-events: auto;
+}
+
+/* No CSS3 support */
+
+.no-opacity       .wrapper-dropdown-3 .dropdown,
+.no-pointerevents .wrapper-dropdown-3 .dropdown {
+    display: none;
+    opacity: 1; /* If opacity support but no pointer-events support */
+    pointer-events: auto; /* If pointer-events support but no pointer-events support */
+}
+
+.no-opacity       .wrapper-dropdown-3.active .dropdown,
+.no-pointerevents .wrapper-dropdown-3.active .dropdown {
+    display: block;
 }
