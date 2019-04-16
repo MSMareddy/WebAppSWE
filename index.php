@@ -228,7 +228,7 @@ try
 	<form method = "post">
 	<div class="grid-container">
 		<div class="Empty1">
-			<h1 class="animated fadeIn" id = "title">Find Cheap Restaurants!</h1>
+			<h1 class="animated fadeIn" id = "title">Restaurant Locator</h1>
 		</div>
 		<div class="Map">
 			<div id="map"></div>
