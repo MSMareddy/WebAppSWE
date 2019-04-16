@@ -288,6 +288,7 @@ li a.active {
 
 .wrapper-dropdown-3 .dropdown li {
       width: 100%; /* makes the dropdown menu item the same width as the container */
+	  text-align:left;
 }
 
 .wrapper-dropdown-3 .dropdown li a {
