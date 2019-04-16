@@ -55,7 +55,8 @@ try
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-		  
+		<script type="text/javascript" src="Element.js"></script>
+		
 		<!-- <?php echo "Radius: ", $radius, " Address: ", $address; ?> -->
 		
 		<script>
@@ -238,21 +239,14 @@ try
 			Select restaurant option:
 		</div>
 		<div class="TypeListBox">
-			<select name ="option">
-				<option value="buffet" <?php if($option == "buffet"){?> selected <?php }?>>Buffet</option>
-				<option value="chicken" <?php if($option == "chicken"){?> selected <?php }?>>Chicken</option>
-				<option value="chinese food" <?php if($option == "chinese food"){?> selected <?php }?>>Chinese</option>
-				<option value="cupcakes" <?php if($option == "cupcakes"){?> selected <?php }?>>Cupcakes</option>
-				<option value="hamburger" <?php if($option == "hamburger"){?> selected <?php }?>>Hamburger</option>
-				<option value="ice cream" <?php if($option == "ice cream"){?> selected <?php }?>>Ice Cream</option>
-				<option value="pasta" <?php if($option == "pasta"){?> selected <?php }?>>Pasta</option>
-				<option value="pizza" <?php if($option == "pizza"){?> selected <?php }?>>Pizza</option>
-				<option value="sandwich" <?php if($option == "sandwich"){?> selected <?php }?>>Sandwich</option>
-				<option value="seafood" <?php if($option == "seafood"){?> selected <?php }?>>Seafood</option>
-				<option value="steak" <?php if($option == "steak"){?> selected <?php }?>>Steak</option>
-				<option value="sushi" <?php if($option == "sushi"){?> selected <?php }?>>Sushi</option>
-				<option value="taco" <?php if($option == "taco"){?> selected <?php }?>>Taco</option>
-			</select>
+			<div id="dd" class="wrapper-dropdown-3" tabindex="1">
+			<span>Transport</span>
+				<ul class="dropdown">
+					<li><a href="#"><i class="icon-envelope icon-large"></i>Classic mail</a></li>
+					<li><a href="#"><i class="icon-truck icon-large"></i>UPS Delivery</a></li>
+					<li><a href="#"><i class="icon-plane icon-large"></i>Private jet</a></li>
+				</ul>
+			</div>
 		</div>
 		<div  class="OptionLabel">
 			Select price range:
