@@ -280,6 +280,7 @@ li a.active {
     font-weight: normal;
     transition: all 0.5s ease-in;
     list-style: none;
+	text-align:left;
 
     /* Hiding */
     opacity: 0;
