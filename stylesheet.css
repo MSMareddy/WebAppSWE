@@ -286,6 +286,10 @@ li a.active {
     pointer-events: none;
 }
 
+.wrapper-dropdown-3 .dropdown li {
+      width: 100%; /* makes the dropdown menu item the same width as the container */
+}
+
 .wrapper-dropdown-3 .dropdown li a {
     display: block;
     padding: 10px;
