@@ -1,3 +1,24 @@
+/* GLOBALS */
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+::selection {
+    background: transparent; 
+}
+
+::-moz-selection {
+    background: transparent; 
+}
+
+
 /*https://grid.layoutit.com/ */
 .grid-container {
   display: grid;
@@ -214,15 +235,7 @@ li a.active {
   background-color: #4CAF50;
 }
 
-*,
-*:after,
-*:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
+
 
 .wrapper-dropdown-3 {
     /* Size and position */
