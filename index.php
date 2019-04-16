@@ -286,11 +286,11 @@ try
 		</div>
 		<div class="TypeListBox">
 			<div id="dd" class="wrapper-dropdown-3" tabindex="1">
-			<span>Transport</span>
+			<span>Food</span>
 				<ul class="dropdown">
-					<li><a href="#"><i class="far fa-envelope"></i>Classic mail</a></li>
-					<li><a href="#"><i class="fas fa-truck"></i>UPS Delivery</a></li>
-					<li><a href="#"><i class="fas fa-plane"></i>Private jet</a></li>
+					<li><a href="#"><i class="fas fa-pizza-slice"></i></i>Pizza</a></li>
+					<li><a href="#"><i class="fas fa-pepper-hot"></i></i>Mexican</a></li>
+					<li><a href="#"><i class="fas fa-hamburger"></i></i>Burgers</a></li>
 					
 				</ul>
 			</div>

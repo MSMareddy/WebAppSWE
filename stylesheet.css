@@ -280,7 +280,7 @@ li a.active {
     font-weight: normal;
     transition: all 0.5s ease-in;
     list-style: none;
-	text-align:left;
+	float:left;
 
     /* Hiding */
     opacity: 0;
@@ -289,7 +289,7 @@ li a.active {
 
 .wrapper-dropdown-3 .dropdown li {
       width: 100%; /* makes the dropdown menu item the same width as the container */
-	  text-align:left;
+	  float:left;
 }
 
 .wrapper-dropdown-3 .dropdown li a {
