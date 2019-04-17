@@ -129,12 +129,12 @@ try
                     {
                         featureType: 'road',
                         elementType: 'geometry',
-                        stylers: [{color: '#1dffdc'}]
+                        stylers: [{color: '#f4fffd'}]
                     },
                     {
                         featureType: 'road',
                         elementType: 'geometry.stroke',
-                        stylers: [{color: '#1694f6'}]
+                        stylers: [{color: '#a4cdf6'}]
                     },
                     {
                         featureType: 'road',
@@ -144,7 +144,7 @@ try
                     {
                         featureType: 'road.highway',
                         elementType: 'geometry',
-                        stylers: [{color: '#c4c5cd'}]
+                        stylers: [{color: '#48cdcd'}]
                     },
                     {
                         featureType: 'road.highway',
