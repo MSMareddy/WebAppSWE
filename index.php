@@ -123,9 +123,9 @@ try
 					},
 				zoom: 11,
                 styles: [
-                    {elementType: 'geometry', stylers: [{color: '#86afe5'}]},
+                    {elementType: 'geometry', stylers: [{color: '#9ddae5'}]},
                     {elementType: 'labels.text.stroke', stylers: [{color: '#7cb0c8'}]},
-                    {elementType: 'labels.text.fill', stylers: [{color: '#327447'}]},
+                    {elementType: 'labels.text.fill', stylers: [{color: '#b683c4'}]},
                     {
                         featureType: 'road',
                         elementType: 'geometry',
