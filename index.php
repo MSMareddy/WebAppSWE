@@ -124,8 +124,8 @@ try
 				zoom: 11,
                 styles: [
                     {elementType: 'geometry', stylers: [{color: '#86afe5'}]},
-                    {elementType: 'labels.text.stroke', stylers: [{color: '#2ea3cb'}]},
-                    {elementType: 'labels.text.fill', stylers: [{color: '#3d5574'}]},
+                    {elementType: 'labels.text.stroke', stylers: [{color: '#7cb0c8'}]},
+                    {elementType: 'labels.text.fill', stylers: [{color: '#327447'}]},
                     {
                         featureType: 'road',
                         elementType: 'geometry',
@@ -144,7 +144,7 @@ try
                     {
                         featureType: 'road.highway',
                         elementType: 'geometry',
-                        stylers: [{color: '#ba3ecd'}]
+                        stylers: [{color: '#c4c5cd'}]
                     },
                     {
                         featureType: 'road.highway',
