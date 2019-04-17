@@ -123,7 +123,7 @@ try
 					},
 				zoom: 11,
                 styles: [
-                    {elementType: 'geometry', stylers: [{color: '#9ddae5'}]},
+                    {elementType: 'geometry', stylers: [{color: '#49fbff'}]},
                     {elementType: 'labels.text.stroke', stylers: [{color: '#7cb0c8'}]},
                     {elementType: 'labels.text.fill', stylers: [{color: '#b683c4'}]},
                     {
