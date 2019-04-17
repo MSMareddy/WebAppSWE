@@ -83,7 +83,20 @@ try
 					location.reload(true);
 				}
 				function error(err) {
-					alert("Location Error: " + err.message);
+					switch(error.code) {
+						case error.PERMISSION_DENIED:
+						  alert("Location Error: " + "User denied the request for Geolocation.")
+						  break;
+						case error.POSITION_UNAVAILABLE:
+						  alert("Location Error: " + "Location information is unavailable.")
+						  break;
+						case error.TIMEOUT:
+						  alert("Location Error: " + "The request to get user location timed out.")
+						  break;
+						case error.UNKNOWN_ERROR:
+						  alert("Location Error: " + "An unknown error occurred.")
+						  break;
+					}
 				}
 			}
 			var map;
