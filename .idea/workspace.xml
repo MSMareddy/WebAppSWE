@@ -22,8 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3915">
-              <caret line="261" column="46" lean-forward="true" selection-start-line="261" selection-start-column="46" selection-end-line="261" selection-end-column="46" />
+            <state relative-caret-position="858">
+              <caret line="274" column="46" selection-start-line="274" selection-start-column="46" selection-end-line="274" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -62,6 +62,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -73,7 +74,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -112,16 +112,18 @@
       <workItem from="1555076598237" duration="78000" />
       <workItem from="1555178439590" duration="32000" />
       <workItem from="1555433681769" duration="1572000" />
+      <workItem from="1555537239312" duration="9000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4688000" />
+    <option name="totallyTimeSpent" value="4697000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2789988" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2820513" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -185,8 +187,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3915">
-          <caret line="261" column="46" lean-forward="true" selection-start-line="261" selection-start-column="46" selection-end-line="261" selection-end-column="46" />
+        <state relative-caret-position="858">
+          <caret line="274" column="46" selection-start-line="274" selection-start-column="46" selection-end-line="274" selection-end-column="46" />
         </state>
       </provider>
     </entry>
