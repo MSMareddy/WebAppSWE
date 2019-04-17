@@ -93,7 +93,7 @@ try
 						case error.TIMEOUT:
 						  alert("Location Error: " + "The request to get user location timed out.")
 						  break;
-						case error.UNKNOWN_ERROR:
+                        case error.UNKNOWN_ERR:
 						  alert("Location Error: " + "An unknown error occurred.")
 						  break;
 					}
