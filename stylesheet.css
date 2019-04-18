@@ -77,7 +77,7 @@ select {
 body{
   background-image: url(coffee.jpg);
   background-repeat: no-repeat;
-  opacity: .2;
+  background-opacity: .2;
   filter: alpha(opacity=20);
   background-size: cover;
 }
