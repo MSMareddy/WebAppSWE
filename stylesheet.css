@@ -80,7 +80,7 @@ body{
   background-repeat: no-repeat;
   background-image-opacity: 0.2;
   filter: alpha(opacity=20);
-  background-size: cover;
+  background-size: contain;
 }
 
 #title {
