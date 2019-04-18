@@ -350,7 +350,7 @@ try
 		}
 		</script>
 	</head>
-<body background="banans.jpg">
+<body>
 	<ul>
 	  <li><a class="active" href="/">Home</a></li>
 	  <li><a id="getLocation" href="/">Change Location</a></li>
