@@ -76,6 +76,7 @@ select {
 
 body{
   background-color: Black;
+  text-decoration-color: white;
   background-image: url(outside.png);
   background-repeat: no-repeat;
   background-image-opacity: 0.5;
