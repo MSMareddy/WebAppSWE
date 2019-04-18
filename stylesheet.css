@@ -78,9 +78,9 @@ body{
   text-decoration-color: white;
   background-image: url(coffee.jpg);
   background-repeat: no-repeat;
-  background-image-opacity: 0.2;
+  background-image-opacity: 0.5;
   filter: alpha(opacity=20);
-  background-size: contain;
+  background-size: inherit;
 }
 
 #title {
