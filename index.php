@@ -331,6 +331,7 @@ try
 				  map: map,
 				  title: place.name,
 				  position: place.geometry.location,
+				  animation: google.maps.Animation.DROP,
 				  label: {
 						text: diffString,
 						fontSize: '10px'
