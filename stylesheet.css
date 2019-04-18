@@ -74,13 +74,23 @@ select {
   cursor: pointer;
 }
 
-body{
-  text-decoration-color: white;
-  background-image: url(coffee.jpg);
-  background-repeat: no-repeat;
-  background-opacity: .2;
-  filter: alpha(opacity=20);
-  background-size: cover;
+div {
+  width: 1000px;
+  height: 1000px;
+  display: block;
+  position: relative;
+}
+
+div::after {
+  content: "";
+  background: url(coffee.jpg);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 #title {
