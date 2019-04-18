@@ -326,10 +326,10 @@ try
 			}
 			
 			function toggleBounce() {
-			  if (marker.getAnimation() !== null) {
-				marker.setAnimation(null);
+			  if (HOME_MARKER.getAnimation() !== null) {
+				HOME_MARKER.setAnimation(null);
 			  } else {
-				marker.setAnimation(google.maps.Animation.BOUNCE);
+				HOME_MARKER.setAnimation(google.maps.Animation.BOUNCE);
 			  }
 			}
 		
