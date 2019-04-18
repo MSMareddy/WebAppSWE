@@ -302,8 +302,6 @@ try
 				<?php } ?>
 			});
 			
-			HOME_MARKER.addListener('click', toggleBounce);
-			
 			service.textSearch(request, function(results, status) {
 			  if (status === google.maps.places.PlacesServiceStatus.OK) {
 				for (var i = 0; i < results.length; i++) {
@@ -323,14 +321,6 @@ try
 				}
 			  }
 			});
-			}
-			
-			function toggleBounce() {
-			  if (HOME_MARKER.getAnimation() !== null) {
-				HOME_MARKER.setAnimation(null);
-			  } else {
-				HOME_MARKER.setAnimation(google.maps.Animation.BOUNCE);
-			  }
 			}
 		
 			function createMarker(place) {
