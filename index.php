@@ -324,6 +324,12 @@ try
 			}
 		
 			function createMarker(place) {
+				var image = {
+					url: 'https://maps.google.com/mapfiles/ms/icons/blue.png'
+					size: new google.maps.Size(20,32),
+					origin: new google.maps.Point(0,0),
+					anchor: new google.maps.Point(0,16)
+					};
 				var home = new google.maps.LatLng(<?php echo $latLong; ?>);
 				//get diff
 				var diffInMiles = google.maps.geometry.spherical.computeDistanceBetween(home, place.geometry.location) * 0.000621371;
@@ -338,7 +344,7 @@ try
 						text: diffString,
 						fontSize: '10px'
 				  },
-				  //icon: 'https://maps.google.com/mapfiles/ms/icons/blue.png',
+				  icon: image,
 				});
 
 				google.maps.event.addListener(marker, 'click', function() {
