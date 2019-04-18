@@ -294,7 +294,7 @@ try
 				title: '<?php echo $address; ?>',
 				<?php if($address == "Home") {?> 
 				icon: 'home.png',
-				marker.addListener('click', toggleBounce);
+				marker.addListener('click', toggleBounce),
 				<?php } else {?>
 				label: {
 					text: '<?php echo $address; ?>',
