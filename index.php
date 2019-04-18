@@ -294,7 +294,6 @@ try
 				title: '<?php echo $address; ?>',
 				<?php if($address == "Home") {?> 
 				icon: 'home.png',
-				marker.addListener('click', toggleBounce),
 				<?php } else {?>
 				label: {
 					text: '<?php echo $address; ?>',
@@ -302,6 +301,9 @@ try
 				},
 				<?php } ?>
 			});
+			
+			HOME_MARKER.addListener('click', toggleBounce);
+			
 			service.textSearch(request, function(results, status) {
 			  if (status === google.maps.places.PlacesServiceStatus.OK) {
 				for (var i = 0; i < results.length; i++) {
