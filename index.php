@@ -336,9 +336,9 @@ try
 				  animation: google.maps.Animation.DROP,
 				  label: {
 						text: diffString,
-						fontSize: '8px'
+						fontSize: '10px'
 				  },
-				  icon: 'https://maps.google.com/mapfiles/ms/icons/blue.png',
+				  //icon: 'https://maps.google.com/mapfiles/ms/icons/blue.png',
 				});
 
 				google.maps.event.addListener(marker, 'click', function() {
