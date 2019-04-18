@@ -124,22 +124,22 @@ try
 				zoom: 11,
                 styles: [
                     {elementType: 'geometry', stylers: [{color: '#80d6ff'}]},
-                    {elementType: 'labels.text.stroke', stylers: [{color: '#030304'}]},
-                    {elementType: 'labels.text.fill', stylers: [{color: '#020203'}]},
+                    {elementType: 'labels.text.stroke', stylers: [{color: '#9898ca'}]},
+                    {elementType: 'labels.text.fill', stylers: [{color: '#242437'}]},
                     {
                         featureType: 'road',
                         elementType: 'geometry',
-                        stylers: [{color: '#f4fffd'}]
+                        stylers: [{color: '#dab5ff'}]
                     },
                     {
                         featureType: 'road',
                         elementType: 'geometry.stroke',
-                        stylers: [{color: '#a4cdf6'}]
+                        stylers: [{color: '#cbb8f6'}]
                     },
                     {
                         featureType: 'road',
                         elementType: 'labels.text.fill',
-                        stylers: [{color: '#9ca5b3'}]
+                        stylers: [{color: '#222427'}]
                     },
                     {
                         featureType: 'road.highway',
