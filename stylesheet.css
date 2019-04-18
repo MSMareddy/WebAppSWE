@@ -80,7 +80,8 @@ body{
   background-repeat: no-repeat;
   background-image-opacity: 0.5;
   filter: alpha(opacity=20);
-  background-size: inherit;
+  background-size: 100% auto;
+
 }
 
 #title {
