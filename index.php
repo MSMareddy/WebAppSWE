@@ -337,8 +337,8 @@ try
 				  label: {
 						text: diffString,
 						fontSize: '10px'
-				  }
-				  //,icon: 'http://maps.google.com/mapfiles/kml/pal2/icon45.png'
+				  },
+				  icon: 'http://maps.google.com/mapfiles/ms/icons/blue.png',
 				});
 
 				google.maps.event.addListener(marker, 'click', function() {
