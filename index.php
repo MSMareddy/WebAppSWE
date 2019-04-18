@@ -294,6 +294,7 @@ try
 				title: '<?php echo $address; ?>',
 				<?php if($address == "Home") {?> 
 				icon: 'home.png',
+				marker.addListener('click', toggleBounce);
 				<?php } else {?>
 				label: {
 					text: '<?php echo $address; ?>',
@@ -320,6 +321,14 @@ try
 				}
 			  }
 			});
+			}
+			
+			function toggleBounce() {
+			  if (marker.getAnimation() !== null) {
+				marker.setAnimation(null);
+			  } else {
+				marker.setAnimation(google.maps.Animation.BOUNCE);
+			  }
 			}
 		
 			function createMarker(place) {
