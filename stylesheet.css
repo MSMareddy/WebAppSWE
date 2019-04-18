@@ -75,6 +75,7 @@ select {
 }
 
 body{
+  text-decoration-color: white;
   background-image: url(coffee.jpg);
   background-repeat: no-repeat;
   background-opacity: .2;
