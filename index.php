@@ -290,9 +290,11 @@ try
 			var HOME_MARKER = new google.maps.Marker({
 				position: home,
 				map: map,
+				animation: google.maps.Animation.DROP,
 				title: '<?php echo $address; ?>',
 				<?php if($address == "Home") {?> 
 				icon: 'home.png',
+				marker.addListener('click', toggleBounce);
 				<?php } else {?>
 				label: {
 					text: '<?php echo $address; ?>',
@@ -320,6 +322,14 @@ try
 			  }
 			});
 			}
+			
+			function toggleBounce() {
+			  if (marker.getAnimation() !== null) {
+				marker.setAnimation(null);
+			  } else {
+				marker.setAnimation(google.maps.Animation.BOUNCE);
+			  }
+			}
 		
 			function createMarker(place) {
 				var home = new google.maps.LatLng(<?php echo $latLong; ?>);
@@ -331,6 +341,7 @@ try
 				  map: map,
 				  title: place.name,
 				  position: place.geometry.location,
+				  animation: google.maps.Animation.DROP,
 				  label: {
 						text: diffString,
 						fontSize: '10px'
