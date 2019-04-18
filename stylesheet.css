@@ -74,11 +74,11 @@ select {
   cursor: pointer;
 }
 
-background{
+body{
   text-decoration-color: white;
   background-image: url(coffee.jpg);
   background-repeat: no-repeat;
-  background-image-opacity: .5;
+  background-image-opacity: 0.2;
   filter: alpha(opacity=20);
   background-size: cover;
 }
