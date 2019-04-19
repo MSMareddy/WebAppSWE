@@ -52,8 +52,8 @@ try
 		<title>Restaurant Finder</title>
 		<meta charset="utf-8">
 		<!-- Icon from https://gauger.io/fonticon/ -->
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 		  
 		<!-- <?php echo "Radius: ", $radius, " Address: ", $address; ?> -->
@@ -293,7 +293,7 @@ try
 				animation: google.maps.Animation.DROP,
 				title: '<?php echo $address; ?>',
 				<?php if($address == "Home") {?> 
-				icon: 'home.png',
+				icon: 'images/home.png',
 				<?php } else {?>
 				label: {
 					text: '<?php echo $address; ?>',
