@@ -1,3 +1,6 @@
+.Empty1,.TypeLabel,.OptionLabel,#sliderlabel {
+	color: white;
+}
 /*https://grid.layoutit.com/ */
 .grid-container {
   display: grid;
@@ -76,7 +79,6 @@ select {
 
 body{
   background-color: Black;
-  color: white;
   background-image: url(restaraunt-background.jpeg);
   background-repeat: no-repeat;
   background-image-opacity: 0.8;
