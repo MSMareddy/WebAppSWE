@@ -1,5 +1,6 @@
 .Empty1,.TypeLabel,.OptionLabel,#sliderlabel {
 	color: white;
+	font-weight: bold;
 }
 /*https://grid.layoutit.com/ */
 .grid-container {
@@ -90,10 +91,6 @@ body{
   //filter: alpha(opacity=80);
   background-size: 100% auto;
 
-}
-
-div {
-  font-weight: bold;
 }
 
 #title {
