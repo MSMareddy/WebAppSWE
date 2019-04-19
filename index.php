@@ -298,7 +298,7 @@ try
 				label: {
 					text: '<?php echo $address; ?>',
 					fontSize: '10px',
-					fontWeight: "bold"
+					fontWeight: 'bold'
 				},
 				<?php } ?>
 			});
@@ -340,8 +340,9 @@ try
 				  position: place.geometry.location,
 				  animation: google.maps.Animation.DROP,
 				  label: {
+					text: diffString,
 					fontSize: '8px',
-					fontWeight: "bold"
+					fontWeight: 'bold'
 				  },
 				  icon: blue_icon,
 				});
