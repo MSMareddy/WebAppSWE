@@ -87,10 +87,14 @@ body{
   background-image: filter: blur(5px);
 
   background-repeat: no-repeat;
-  background-image-opacity: 0.8;
+  //background-image-opacity: 0.8;
   filter: alpha(opacity=80);
   background-size: 100% auto;
 
+}
+
+div {
+  font-weight: bold;
 }
 
 #title {
