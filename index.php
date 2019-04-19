@@ -297,7 +297,8 @@ try
 				<?php } else {?>
 				label: {
 					text: '<?php echo $address; ?>',
-					fontSize: '10px'
+					fontSize: '10px',
+					fontWeight: "bold"
 				},
 				<?php } ?>
 			});
@@ -324,6 +325,10 @@ try
 			}
 		
 			function createMarker(place) {
+				var blue_icon = {
+					url: 'https://maps.google.com/mapfiles/ms/icons/blue.png', 
+					labelOrigin: new google.maps.Point(15,10)
+				};
 				var home = new google.maps.LatLng(<?php echo $latLong; ?>);
 				//get diff
 				var diffInMiles = google.maps.geometry.spherical.computeDistanceBetween(home, place.geometry.location) * 0.000621371;
@@ -335,10 +340,10 @@ try
 				  position: place.geometry.location,
 				  animation: google.maps.Animation.DROP,
 				  label: {
-						text: diffString,
-						fontSize: '10px'
+					fontSize: '8px',
+					fontWeight: "bold"
 				  },
-				  //icon: 'https://maps.google.com/mapfiles/ms/icons/blue.png',
+				  icon: blue_icon,
 				});
 
 				google.maps.event.addListener(marker, 'click', function() {
