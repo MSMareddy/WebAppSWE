@@ -84,7 +84,7 @@ body{
 
   background-image: url(restaraunt-background.jpeg);
   background-repeat: no-repeat;
-  filter: blur(8px);
+  filter: blur(10px);
   background-image-opacity: 0.8;
   filter: alpha(opacity=80);
   background-size: 100% auto;
