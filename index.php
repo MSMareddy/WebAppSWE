@@ -327,7 +327,7 @@ try
 			function createMarker(place) {
 				var blue_icon = {
 					url: 'https://maps.google.com/mapfiles/ms/icons/blue.png', 
-					labelOrigin: new google.maps.Point(16,10)
+					labelOrigin: new google.maps.Point(15.5,10)
 				};
 				var home = new google.maps.LatLng(<?php echo $latLong; ?>);
 				//get diff
