@@ -77,6 +77,8 @@ select {
 body{
   background-color: Black;
   color: white;
+  mix-blend-mode: difference;
+
   background-image: url(restaraunt-background.jpeg);
   background-repeat: no-repeat;
   background-image-opacity: 0.8;
