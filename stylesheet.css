@@ -76,13 +76,16 @@ select {
 
 body{
   background-color: Black;
-  text-decoration-color: white;
   background-image: url(restaraunt-background.jpeg);
   background-repeat: no-repeat;
   background-image-opacity: 0.8;
   filter: alpha(opacity=20);
   background-size: 100% auto;
 
+}
+
+div {
+  text-decoration-color: white;
 }
 
 #title {
