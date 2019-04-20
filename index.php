@@ -306,12 +306,12 @@ try
 			var legend = document.getElementById('legend');
 			
 			var div = document.createElement('div');
-			div.innerHTML = '<img width = "16" height = "16" src="' + 'https://maps.google.com/mapfiles/ms/icons/blue.png'  + '"> ' + "Open<br>";
+			div.innerHTML = '<img width = "16" height = "16" src="' + 'images/blue.png'  + '"> ' + "Open<br>";
 			div.id = "legendEntry";
 			legend.appendChild(div);
 			
 			var div2 = document.createElement('div');
-			div2.innerHTML = '<img width = "16" height = "16" src="' + 'https://maps.google.com/mapfiles/ms/icons/red.png'  + '"> ' + "Closed";
+			div2.innerHTML = '<img width = "16" height = "16" src="' + 'images/red.png'  + '"> ' + "Closed";
 			div2.id = "legendEntry";
 			legend.appendChild(div2);
 			
@@ -367,7 +367,7 @@ try
 					console.log("Open now warning: " + undefinedErr.message);
 				}
 				var place_icon = {
-					url: 'https://maps.google.com/mapfiles/ms/icons/'+ color +'.png', 
+					url: 'images/'+ color +'.png', 
 					labelOrigin: new google.maps.Point(15.25,10)
 				};
 				var home = new google.maps.LatLng(<?php echo $latLong; ?>);
