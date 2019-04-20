@@ -327,18 +327,20 @@ try
 			function createMarker(place) {
 				var weightOfFont = "normal";
 				var openNow = "N/A";
+				var color = "blue";
 				try {
 					var open = place.opening_hours.open_now;
 					if (open != null) {
 						weightOfFont = open? "bold":"lighter";
 						openNow = open? "<strong>Open</strong>":"<i>Closed</i>";
+						color = open?"blue":"red";
 					}
 				}
 				catch(undefinedErr) {
 					console.log("Open now warning: " + undefinedErr.message);
 				}
-				var blue_icon = {
-					url: 'https://maps.google.com/mapfiles/ms/icons/blue.png', 
+				var place_icon = {
+					url: 'https://maps.google.com/mapfiles/ms/icons/'+ color +'.png', 
 					labelOrigin: new google.maps.Point(15.25,10)
 				};
 				var home = new google.maps.LatLng(<?php echo $latLong; ?>);
@@ -356,9 +358,9 @@ try
 					fontSize: '8px',
 					fontWeight: weightOfFont,
 				  },
-				  icon: blue_icon,
+				  icon: place_icon,
 				});
-
+				
 				google.maps.event.addListener(marker, 'click', function() {
 				  infowindow.setContent("<em>"+ place.name + "</em><br>" + place.formatted_address + "<br>" + "Approx Distance from <?php echo $address; ?>: " + diffString + "mi<br>"
 				  + "Rating: " + place.rating + "/5<br>" + openNow + "<br>"
