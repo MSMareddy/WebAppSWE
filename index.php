@@ -315,6 +315,17 @@ try
 			div2.id = "legendEntry";
 			legend.appendChild(div2);
 			
+			var div3 = document.createElement('div');
+			div3.innerHTML = "1.1 Distance";
+			div3.id = "legendEntry";
+			legend.appendChild(div3);
+			
+			<?php if($address == "Home") {?> 
+			var div4 = document.createElement('div');
+			div4.innerHTML = '<img width = "16" height = "16" src="' + 'images/home.png'  + '"> ' + "<?php echo $address; ?>";
+			div4.id = "legendEntry";
+			legend.appendChild(div4);
+			<?php } ?>
 			map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
 			
 			service.textSearch(request, function(results, status) {
