@@ -325,7 +325,13 @@ try
 			}
 		
 			function createMarker(place) {
-				var weightOfFont = place.opening_hours.open_now? "bold":"lighter";
+				var weightOfFont = "normal";
+				var openNow = "N/A";
+				var open = place.opening_hours.open_now;
+				if (open != null) {
+					weightOfFont = open? "bold":"lighter";
+					openNow = open? "<strong>Open</strong>":"<i>Closed</i>";
+				}
 				var blue_icon = {
 					url: 'https://maps.google.com/mapfiles/ms/icons/blue.png', 
 					labelOrigin: new google.maps.Point(15.25,10)
@@ -349,8 +355,7 @@ try
 				});
 
 				google.maps.event.addListener(marker, 'click', function() {
-				  var openNow = place.opening_hours.open_now? "<strong>Open</strong>":"<i>Closed</i>";
-				  infowindow.setContent(place.name + "<br>" + place.formatted_address + "<br>" + "Approx Distance from <?php echo $address; ?>: " + diffString + "mi<br>"
+				  infowindow.setContent("<em>"+ place.name + "</em><br>" + place.formatted_address + "<br>" + "Approx Distance from <?php echo $address; ?>: " + diffString + "mi<br>"
 				  + "Rating: " + place.rating + "/5<br>" + openNow + "<br>"
 				  + "<a target= '_blank' href = 'https://www.google.com/maps/search/?api=1&query=" + escape(place.name) + "&query_place_id=" + place.place_id + "'>View on Google Maps</a>");
 				  infowindow.open(map, this);
