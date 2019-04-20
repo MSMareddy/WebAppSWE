@@ -117,6 +117,23 @@ body{
 	background-size: 150vh;
   }
 }
+#legend {
+	font-family: Arial, sans-serif;
+	background: #fff;
+	padding: 5px;
+	margin: 5px;
+	border: 3px solid #000;
+}
+#legend strong {
+	margin-top: 0;
+	text-align: left;
+}
+#legend img {
+	vertical-align: middle;
+}
+#legendEntry {
+	padding: 5px;
+}
 /* http://danielstern.ca/range.css/ */
 input[type=range] {
   -webkit-appearance: none;

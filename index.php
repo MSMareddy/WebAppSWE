@@ -302,6 +302,20 @@ try
 				},
 				<?php } ?>
 			});
+						
+			var legend = document.getElementById('legend');
+			
+			var div = document.createElement('div');
+			div.innerHTML = '<img width = "16" height = "16" src="' + 'https://maps.google.com/mapfiles/ms/icons/blue.png'  + '"> ' + "Open<br>";
+			div.id = "legendEntry";
+			legend.appendChild(div);
+			
+			var div2 = document.createElement('div');
+			div2.innerHTML = '<img width = "16" height = "16" src="' + 'https://maps.google.com/mapfiles/ms/icons/red.png'  + '"> ' + "Closed";
+			div2.id = "legendEntry";
+			legend.appendChild(div2);
+			
+			map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
 			
 			service.textSearch(request, function(results, status) {
 			  if (status === google.maps.places.PlacesServiceStatus.OK) {
@@ -317,13 +331,15 @@ try
 				  }
 				}
 				console.log("Results within bounds: " + count);
+				
+				legend.appendChild(div);
 				if (count === 0) {
 					alert("No Places found for Restraunt type: <?php echo $option; ?> and price level: <?php echo $price; ?>\nPlease choose something else.");
 				}
 			  }
 			});
 			}
-		
+			
 			function createMarker(place) {
 				var weightOfFont = "normal";
 				var openNow = "N/A";
@@ -387,6 +403,7 @@ try
 		</div>
 		<div class="Map">
 			<div id="map"></div>
+			<div id="legend"><strong>Legend</strong></div>
 			<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo getenv('API_KEY'); ?>&libraries=geometry,places&callback=initMap" async defer></script>
 		</div>
 		<div class="TypeLabel">
