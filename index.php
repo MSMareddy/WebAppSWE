@@ -327,10 +327,15 @@ try
 			function createMarker(place) {
 				var weightOfFont = "normal";
 				var openNow = "N/A";
-				var open = place.opening_hours.open_now;
-				if (open != null) {
-					weightOfFont = open? "bold":"lighter";
-					openNow = open? "<strong>Open</strong>":"<i>Closed</i>";
+				try {
+					var open = place.opening_hours.open_now;
+					if (open != null) {
+						weightOfFont = open? "bold":"lighter";
+						openNow = open? "<strong>Open</strong>":"<i>Closed</i>";
+					}
+				}
+				catch(undefinedErr) {
+					console.log("Open now warning: " + undefinedErr.message);
 				}
 				var blue_icon = {
 					url: 'https://maps.google.com/mapfiles/ms/icons/blue.png', 
