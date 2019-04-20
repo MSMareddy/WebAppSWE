@@ -29,20 +29,6 @@
 
 .PriceSlider { grid-area: PriceSlider; width: 10vw;}
 
-@media screen and (orientation: portrait) {
-  .grid-container {
-	  display: grid;
-	  grid-template-columns: 1fr 1fr;
-	  grid-template-rows: 0.3fr 0.2fr 0.2fr 0.3fr 2.5fr;
-	  grid-template-areas: "Empty1 Empty1" "TypeLabel TypeListBox" "OptionLabel PriceSlider" "SubmitButton SubmitButton" "Map Map";
-	  height: 66vh;
-	  width: 80vw;
-  }
-  .TypeListBox { width: 50%;}
-
-  .PriceSlider { width: 50%;}
-}
-
 .hvr-grow {
   display: inline-block;
   vertical-align: middle;
@@ -58,8 +44,6 @@
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
-
-
 
 select {
 	-webkit-border-radius: 10px;
@@ -116,6 +100,22 @@ body{
 #rightlabel {
 	width: 100%;
 	text-align: right;
+}
+@media screen and (orientation: portrait) {
+  .grid-container {
+	  display: grid;
+	  grid-template-columns: 1fr 1fr;
+	  grid-template-rows: 0.3fr 0.2fr 0.2fr 0.3fr 2.5fr;
+	  grid-template-areas: "Empty1 Empty1" "TypeLabel TypeListBox" "OptionLabel PriceSlider" "SubmitButton SubmitButton" "Map Map";
+	  height: 66vh;
+	  width: 80vw;
+  }
+  .TypeListBox { width: 50%;}
+
+  .PriceSlider { width: 50%;}
+  body {
+	background-size: 150vh;
+  }
 }
 /* http://danielstern.ca/range.css/ */
 input[type=range] {
