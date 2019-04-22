@@ -381,6 +381,6 @@ li a.active {
    left: 0;
    bottom: 0;
    width: 100%;
-   color: white;
+   color: gray;
    text-align: left;
 }
