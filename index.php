@@ -58,7 +58,10 @@ try
 		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-		  
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+		<script src="ElementsJS/Elements.js"></script> 
+		
 		<!-- <?php echo "Radius: ", $radius, " Address: ", $address; ?> -->
 		
 		<script>
