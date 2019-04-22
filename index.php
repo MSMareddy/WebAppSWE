@@ -555,7 +555,7 @@ try
 		</div>
 		<div class="TypeListBox">
 			<div id="dd" class="wrapper-dropdown-3" tabindex="1">
-				<span>Food</span>
+				<span><?php echo $option; ?></span>
 				<ul class="dropdown">
 					<li><a href="javascript:void(0);" onclick="functionABC('Pizza')"><i class="fas fa-pizza-slice"></i></i>Pizza</a></li>
 					<li><a href="javascript:void(0);" onclick="functionABC('Mexican')"><i class="fas fa-pepper-hot"></i></i>Mexican</a></li>
@@ -581,7 +581,10 @@ try
 		</div>
 		<div class="Empty2"></div>
 	</div>
+	
+	<input type="hidden" name="selected" id="selected" value="<?php echo $option; ?>" />
 	</form>
+	
 </body>
 </html>
 <!--
