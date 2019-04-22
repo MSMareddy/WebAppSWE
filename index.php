@@ -107,6 +107,18 @@ try
 				}
 				
 				/**
+				 * Resets cookie by deleting them. Result is setting location
+				 * back to PKI.
+				 *
+				 * @return boolean page redirects based on return value.
+				 */
+				document.getElementById("clearLocation").onclick = function() {
+					document.cookie = "latCookie= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
+					document.cookie = "longCookie= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
+					return true;
+				}
+				
+				/**
 				 * get all href elements based on class name catEl[Restraunt Category Element].
 				 * set the option form argument to the id value of href that is selected by the user
 				 *
@@ -573,6 +585,7 @@ try
 	<ul>
 	  <li><a class="active" href="/">Home</a></li>
 	  <li><a id="getLocation" href="/">Update Location</a></li>
+	  <li><a id="clearLocation" href="/">Clear Location</a></li>
 	  <li><a href ="https://github.com/MSMareddy/WebAppSWE">About</a></li>
 	</ul>
 	<form method = "post">
