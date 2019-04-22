@@ -582,7 +582,7 @@ try
 		<div class="Empty2"></div>
 	</div>
 	
-	<input type="hidden" name="option" id="selected" value="<?php echo $option; ?>" />
+	<input type="hidden" name="option" id="selected" value="<?php echo ucfirst($option); ?>" />
 	</form>
 	
 </body>
