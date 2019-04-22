@@ -479,7 +479,7 @@ try
 		</div>
 		<div class="Map">
 			<div id="map"></div>
-			<div id="legend"><strong>Legend</strong></div>
+			<div id="legend" style="display: none"><strong>Legend</strong></div>
 			<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo getenv('API_KEY'); ?>&libraries=geometry,places&callback=initMap" async defer></script>
 		</div>
 		<div class="TypeLabel">
