@@ -369,6 +369,7 @@ try
 			<?php } ?>
 			// move legend div inside map.
 			map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+			legend.style.display = "block";
 			
 			/**
 			 * textSearch
@@ -459,7 +460,6 @@ try
 				  infowindow.open(map, this);
 				});
 			}
-			legend.style.display = "block";
 		}
 		catch(generalError) {
 			//General error logging to console.
