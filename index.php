@@ -64,8 +64,8 @@ try
 		"seafood"=> "Seafood",
 		"steak" => "Steak",
 		"sushi" => "Sushi",
-		"taco" => "Mexican"
-		"cake" => "Cake"		
+		"taco" => "Mexican",
+		"cake" => "Cake",		
 	];
 ?>
 <html lang = "en">
