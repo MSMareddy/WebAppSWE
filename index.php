@@ -57,7 +57,7 @@ try
 		"chinese food"=> "Chinese" ,
 		"cupcake"  => "Cupcake",
 		"hamburger" => "Hamburger",
-		"ice cream" => "Ice Cream",
+		"icecream" => "Ice Cream",
 		"pasta" => "Pasta",
 		"pizza" => "Pizza",
 		"sandwich" => "Sandwich",
@@ -618,7 +618,7 @@ try
 					<li><a href="#" class="catEl" id = "steak"><i class="fas fa-bacon"></i>Steak</a></li>		
 					<li><a href="#" class="catEl" id = "seafood"><i class="fas fa-water"></i>Seafood</a></li>
 					<li><a href="#" class="catEl" id = "sushi"><i class="fas fa-fish"></i>Sushi</a></li>	
-					<li><a href="#" class="catEl" id = "ice cream"><i class="fas fa-ice-cream"></i>Ice Cream</a></li>
+					<li><a href="#" class="catEl" id = "icecream"><i class="fas fa-ice-cream"></i>Ice Cream</a></li>
 					<li><a href="#" class="catEl" id = "cake"><i class="fas fa-birthday-cake"></i>Cake</a></li>
 				</ul>
 			</div>
