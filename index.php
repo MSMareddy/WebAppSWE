@@ -586,7 +586,7 @@ try
 					<li><a href="#" class="catEl" id = "pizza"><i class="fas fa-pizza-slice"></i>Pizza</a></li>
 					<li><a href="#" class="catEl" id = "taco"><i class="fas fa-pepper-hot"></i>Mexican</a></li>
 					<li><a href="#" class="catEl" id = "hamburger"><i class="fas fa-hamburger"></i>Hamburger</a></li>	
-					<li><a href="#" class="catEl" id = "chicken"><<i class="fas fa-drumstick-bite"></i>Chicken</a></li>	
+					<li><a href="#" class="catEl" id = "chicken"><i class="fas fa-drumstick-bite"></i>Chicken</a></li>	
 					<li><a href="#" class="catEl" id = "sandwich"><i class="fas fa-bread-slice"></i>Sandwich</a></li>	
 					<li><a href="#" class="catEl" id = "steak"><i class="fas fa-bacon"></i>Steak</a></li>		
 					<li><a href="#" class="catEl" id = "seafood"><i class="fas fa-water"></i>Seafood</a></li>
