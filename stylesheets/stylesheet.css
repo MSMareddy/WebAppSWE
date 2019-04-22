@@ -261,7 +261,7 @@ li a.active {
 .wrapper-dropdown-3 {
     /* Size and position */
     position: relative;
-    width: 200px;
+    width: 100%;
     margin: 0 auto;
     padding: 10px;
 	z-index:5;

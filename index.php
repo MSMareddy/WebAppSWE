@@ -563,8 +563,7 @@ try
 					<li><a href="javascript:void(0);" onclick="functionABC('Burgers')"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
 					<li><a href="javascript:void(0);" onclick="functionABC('Burgers')"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
 					<li><a href="javascript:void(0);" onclick="functionABC('Burgers')"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
-					<li><a href="javascript:void(0);" onclick="functionABC('Burgers')"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
-
+					<li><a href="javascript:void(0);" onclick="functionABC('Burgers')"><i class="fas fa-hamburger"></i></i>Burgers</a></li>
 				</ul>
 			</div>
 		</div>
