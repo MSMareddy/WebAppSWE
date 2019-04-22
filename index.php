@@ -509,11 +509,12 @@ try
 				controlText.innerHTML = 'Show Legend';
 				controlUI.appendChild(controlText);
 
-			// Setup the click event listeners: simply set the map to Chicago.
-			controlUI.addEventListener('click', function() {
-			  legend.style.display = "block";
-			});
+				// Setup the click event listeners: simply set the map to Chicago.
+				controlUI.addEventListener('click', function() {
+				  legend.style.display = "block";
+				});
 			}
+		}
 		catch(generalError) {
 			//General error logging to console.
 			console.log("General Error: " + generalError.message);
