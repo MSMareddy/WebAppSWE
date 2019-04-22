@@ -92,8 +92,8 @@ try
 				console.log(elements.length);
 				for (var i=0; i < elements.length; i++) {
 					elements[i].onclick = function() {
-						console.log("Ele: " + elements[i]);
-						var optionArg = elements[i].id;
+						console.log("Ele: " + this);
+						var optionArg = this.id;
 						document.getElementById("selected").value = optionArg;
 						console.log("Selected: " + optionArg);
 						return false;
