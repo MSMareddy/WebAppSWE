@@ -459,7 +459,7 @@ try
 				  infowindow.open(map, this);
 				});
 			}
-			document.getElementById("legend").style.display = "block";
+			legend.style.display = "block";
 		}
 		catch(generalError) {
 			//General error logging to console.
