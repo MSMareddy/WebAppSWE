@@ -49,6 +49,21 @@ try
 		$address = "Home";
 		$latLong = $_COOKIE["latCookie"] . ", " . $_COOKIE["longCookie"];
 	}
+	$optionArray = [
+    "buffet" => "Buffet",
+    "chicken" => "Chicken",
+	"chinese food"=> "Chinese" ,
+	"cupcake"  => "Cupcake",
+	"hamburger" => "Hamburger",
+	"ice cream" => "Ice Cream",
+	"pasta" => "Pasta",
+	"pizza" => "Pizza",
+	"sandwich" => "Sandwich",
+	"seafood"=> "Seafood",
+	"steak" => "Steak",
+	"sushi" => "Sushi",
+	"taco" => "Mexican"
+	];
 ?>
 <html lang = "en">
 	<head>
@@ -566,12 +581,11 @@ try
 		</div>
 		<div class="TypeListBox">
 			<div id="dd" class="wrapper-dropdown-3" tabindex="1">
-				<span><?php echo ucfirst($option); ?></span>
+				<span><?php echo ucfirst($optionArray[$option]); ?></span>
 				<ul class="dropdown">
 					<li><a href="#" class="catEl" id = "pizza"><i class="fas fa-pizza-slice"></i>Pizza</a></li>
-					<li><a href="#" class="catEl" id = "mexican"><i class="fas fa-pepper-hot"></i>Mexican</a></li>
-					<li><a href="#" class="catEl" id = "burgers"><i class="fas fa-hamburger"></i>Burgers</a></li>	
-					<li><a href="#" class="catEl" id = "abc"><i class="fas fa-hamburger"></i>Def</a></li>	
+					<li><a href="#" class="catEl" id = "taco"><i class="fas fa-pepper-hot"></i>Mexican</a></li>
+					<li><a href="#" class="catEl" id = "burgers"><i class="fas fa-hamburger"></i>Burgers</a></li>		
 					<li><a href="#" class="catEl"><i class="fas fa-hamburger"></i>Burgers</a></li>	
 					<li><a href="#" class="catEl"><i class="fas fa-hamburger"></i>Burgers</a></li>	
 					<li><a href="#" class="catEl"><i class="fas fa-hamburger"></i>Burgers</a></li>
