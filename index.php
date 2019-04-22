@@ -568,9 +568,9 @@ try
 			<div id="dd" class="wrapper-dropdown-3" tabindex="1">
 				<span><?php echo ucfirst($option); ?></span>
 				<ul class="dropdown">
-					<li><a href="#" class="catEl" id = "pizza"><i class="fas fa-pizza-slice"></i></i>Pizza</a></li>
-					<li><a href="#" class="catEl" id = "mexican"><i class="fas fa-pepper-hot"></i></i>Mexican</a></li>
-					<li><a href="#" class="catEl" id = "burgers"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
+					<li><a href="#" class="catEl" id = "pizza"><i class="fas fa-pizza-slice"></i>Pizza</a></li>
+					<li><a href="#" class="catEl" id = "mexican"><i class="fas fa-pepper-hot"></i>Mexican</a></li>
+					<li><a href="#" class="catEl" id = "burgers"><i class="fas fa-hamburger"></i>Burgers</a></li>	
 					<li><a href="#" class="catEl"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
 					<li><a href="#" class="catEl"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
 					<li><a href="#" class="catEl"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
