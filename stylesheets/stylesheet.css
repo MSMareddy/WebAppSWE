@@ -376,3 +376,11 @@ li a.active {
     opacity: 1;
     pointer-events: auto;
 }
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   color: gray;
+   text-align: left;
+}

@@ -621,7 +621,11 @@ try
 	
 	<input type="hidden" name="option" id="selected" value="<?php echo ($option); ?>" />
 	</form>
-	
+	<div class="footer">
+		<hr>
+		<p>Note: View Maps in full-screen for optimal results.</p>
+	</div>
+
 </body>
 </html>
 <!--
