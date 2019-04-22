@@ -49,20 +49,22 @@ try
 		$address = "Home";
 		$latLong = $_COOKIE["latCookie"] . ", " . $_COOKIE["longCookie"];
 	}
+	
+	#backend frontend Mapping for optimal search results.
 	$optionArray = [
-    "buffet" => "Buffet",
-    "chicken" => "Chicken",
-	"chinese food"=> "Chinese" ,
-	"cupcake"  => "Cupcake",
-	"hamburger" => "Hamburger",
-	"ice cream" => "Ice Cream",
-	"pasta" => "Pasta",
-	"pizza" => "Pizza",
-	"sandwich" => "Sandwich",
-	"seafood"=> "Seafood",
-	"steak" => "Steak",
-	"sushi" => "Sushi",
-	"taco" => "Mexican"
+		"buffet" => "Buffet",
+		"chicken" => "Chicken",
+		"chinese food"=> "Chinese" ,
+		"cupcake"  => "Cupcake",
+		"hamburger" => "Hamburger",
+		"ice cream" => "Ice Cream",
+		"pasta" => "Pasta",
+		"pizza" => "Pizza",
+		"sandwich" => "Sandwich",
+		"seafood"=> "Seafood",
+		"steak" => "Steak",
+		"sushi" => "Sushi",
+		"taco" => "Mexican"
 	];
 ?>
 <html lang = "en">
@@ -102,14 +104,20 @@ try
 					}
 					return false;
 				}
+				
+				/**
+				 * get all href elements based on class name catEl[Restraunt Category Element].
+				 * set the option form argument to the id value of href that is selected by the user
+				 *
+				 * @return boolean page redirects based on return value.
+				 */
 				var elements = document.getElementsByClassName('catEl');
-				console.log(elements.length);
+				console.log("Number of categories: " + elements.length);
 				for (var i=0; i < elements.length; i++) {
 					elements[i].onclick = function() {
-						console.log("Ele: " + this);
 						var optionArg = this.id;
 						document.getElementById("selected").value = optionArg;
-						console.log("Selected: " + optionArg);
+						console.log("Category Selected: " + optionArg);
 						return false;
 					}
 				}
@@ -358,11 +366,11 @@ try
 					}
 				]
 			});
-			var centerControlDiv = document.createElement('div');
-			var centerControl = new CenterControl(centerControlDiv, map);
+			var legendControlDiv = document.createElement('div');
+			var legendControl = new LegendControl(legendControlDiv, map);
 
-			centerControlDiv.index = 1;
-			map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
+			legendControlDiv.index = 1;
+			map.controls[google.maps.ControlPosition.TOP_CENTER].push(legendControlDiv);
 
 			var request = {
 			  query: '<?php echo $option; ?>',
@@ -507,12 +515,12 @@ try
 				});
 			}
 			/**
-			* The CenterControl adds a control to the map that recenters the map on
-			* Chicago.
+			* The LegendControl adds a control to the map that allows user to display legend.
+			* 
 			* This constructor takes the control DIV as an argument.
 			* @constructor
 			*/
-			function CenterControl(controlDiv, map) {
+			function LegendControl(controlDiv, map) {
 
 				// Set CSS for the control border.
 				var controlUI = document.createElement('div');
