@@ -581,7 +581,7 @@ try
 		</div>
 		<div class="TypeListBox">
 			<div id="dd" class="wrapper-dropdown-3" tabindex="1">
-				<span><?php echo ucfirst($option); ?></span>
+				<span><?php echo ucfirst($optionArray[$option]); ?></span>
 				<ul class="dropdown">
 					<li><a href="#" class="catEl" id = "pizza"><i class="fas fa-pizza-slice"></i>Pizza</a></li>
 					<li><a href="#" class="catEl" id = "taco"><i class="fas fa-pepper-hot"></i>Mexican</a></li>
