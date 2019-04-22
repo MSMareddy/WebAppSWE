@@ -551,21 +551,20 @@ try
 			Select restaurant option:
 		</div>
 		<div class="TypeListBox">
-			<select name ="option">
-				<option value="buffet" <?php if($option == "buffet"){?> selected <?php }?>>Buffet</option>
-				<option value="chicken" <?php if($option == "chicken"){?> selected <?php }?>>Chicken</option>
-				<option value="chinese food" <?php if($option == "chinese food"){?> selected <?php }?>>Chinese</option>
-				<option value="cupcakes" <?php if($option == "cupcakes"){?> selected <?php }?>>Cupcakes</option>
-				<option value="hamburger" <?php if($option == "hamburger"){?> selected <?php }?>>Hamburger</option>
-				<option value="ice cream" <?php if($option == "ice cream"){?> selected <?php }?>>Ice Cream</option>
-				<option value="pasta" <?php if($option == "pasta"){?> selected <?php }?>>Pasta</option>
-				<option value="pizza" <?php if($option == "pizza"){?> selected <?php }?>>Pizza</option>
-				<option value="sandwich" <?php if($option == "sandwich"){?> selected <?php }?>>Sandwich</option>
-				<option value="seafood" <?php if($option == "seafood"){?> selected <?php }?>>Seafood</option>
-				<option value="steak" <?php if($option == "steak"){?> selected <?php }?>>Steak</option>
-				<option value="sushi" <?php if($option == "sushi"){?> selected <?php }?>>Sushi</option>
-				<option value="taco" <?php if($option == "taco"){?> selected <?php }?>>Taco</option>
-			</select>
+			<input type="hidden" name="selected" id="selected" value="<?php echo $option; ?>/>
+			<div id="dd" class="wrapper-dropdown-3" tabindex="1">
+				<span>Food</span>
+				<ul class="dropdown">
+					<li><a href="javascript:void(0);" onclick="functionABC('Pizza')"><i class="fas fa-pizza-slice"></i></i>Pizza</a></li>
+					<li><a href="javascript:void(0);" onclick="functionABC('Mexican')"><i class="fas fa-pepper-hot"></i></i>Mexican</a></li>
+					<li><a href="javascript:void(0);" onclick="functionABC('Burgers')"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
+					<li><a href="javascript:void(0);" onclick="functionABC('Burgers')"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
+					<li><a href="javascript:void(0);" onclick="functionABC('Burgers')"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
+					<li><a href="javascript:void(0);" onclick="functionABC('Burgers')"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
+					<li><a href="javascript:void(0);" onclick="functionABC('Burgers')"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
+
+				</ul>
+			</div>
 		</div>
 		<div  class="OptionLabel">
 			Select price range:
