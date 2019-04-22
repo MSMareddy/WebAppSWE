@@ -369,7 +369,6 @@ try
 			<?php } ?>
 			// move legend div inside map.
 			map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
-			legend.style.display = "block";
 			
 			/**
 			 * textSearch
@@ -401,6 +400,9 @@ try
 				
 				if (count === 0) {
 					alert("No Places found for Restraunt type: <?php echo $option; ?> and price level: <?php echo $price; ?>\nPlease choose something else.");
+				}
+				else {
+					legend.style.display = "block";
 				}
 			  }
 			});
