@@ -230,7 +230,6 @@ try
 				streetViewControlOptions: {
 				  position: google.maps.ControlPosition.LEFT_TOP
 				},
-				fullscreenControl: true,
 				styles: [
 					{
 						featureType: "administrative",
