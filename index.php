@@ -88,6 +88,12 @@ try
 					}
 					return false;
 				}
+				document.getElementById("catEl").onclick = function() {
+					var optionArg = document.getElementById("catEl").className;
+					document.getElementById("selected").value = optionArg;
+					console.log("Selected: " + optionArg);
+					return false;
+				}
 				/**
 				 * showPosition
 				 *
@@ -557,13 +563,13 @@ try
 			<div id="dd" class="wrapper-dropdown-3" tabindex="1">
 				<span><?php echo ucfirst($option); ?></span>
 				<ul class="dropdown">
-					<li><a href="javascript:void(0);" onclick="functionABC('Pizza')"><i class="fas fa-pizza-slice"></i></i>Pizza</a></li>
-					<li><a href="javascript:void(0);" onclick="functionABC('Mexican')"><i class="fas fa-pepper-hot"></i></i>Mexican</a></li>
-					<li><a href="javascript:void(0);" onclick="functionABC('Burgers')"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
-					<li><a href="javascript:void(0);" onclick="functionABC('Burgers')"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
-					<li><a href="javascript:void(0);" onclick="functionABC('Burgers')"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
-					<li><a href="javascript:void(0);" onclick="functionABC('Burgers')"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
-					<li><a href="javascript:void(0);" onclick="functionABC('Burgers')"><i class="fas fa-hamburger"></i></i>Burgers</a></li>
+					<li><a href="#" id="catEl" class="pizza"><i class="fas fa-pizza-slice"></i></i>Pizza</a></li>
+					<li><a href="#" id="catEl" class ="mexican"><i class="fas fa-pepper-hot"></i></i>Mexican</a></li>
+					<li><a href="#" id="catEl" class ="burgers"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
+					<li><a href="#" id="catEl"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
+					<li><a href="#" id="catEl"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
+					<li><a href="#" id="catEl"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
+					<li><a href="#" id="catEl"><i class="fas fa-hamburger"></i></i>Burgers</a></li>
 				</ul>
 			</div>
 		</div>
