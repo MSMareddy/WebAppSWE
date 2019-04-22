@@ -49,7 +49,7 @@ try
 ?>
 <html lang = "en">
 	<head>
-		<title>Restaurant Finder</title>
+		<title>Restaurant Locator</title>
 		<meta charset="utf-8">
 		<!-- Icon from https://gauger.io/fonticon/ -->
 		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
@@ -306,12 +306,12 @@ try
 			var legend = document.getElementById('legend');
 			
 			var div = document.createElement('div');
-			div.innerHTML = '<img width = "16" height = "16" src="' + 'images/blue.png'  + '"> ' + "Open<br>";
+			div.innerHTML = '<img alt = "Open Red" width = "16" height = "16" src="' + 'images/blue.png'  + '"> ' + "Open<br>";
 			div.id = "legendEntry";
 			legend.appendChild(div);
 			
 			var div2 = document.createElement('div');
-			div2.innerHTML = '<img width = "16" height = "16" src="' + 'images/red.png'  + '"> ' + "Closed";
+			div2.innerHTML = '<img alt = "Closed Red" width = "16" height = "16" src="' + 'images/red.png'  + '"> ' + "Closed";
 			div2.id = "legendEntry";
 			legend.appendChild(div2);
 			
@@ -322,7 +322,7 @@ try
 			
 			<?php if($address == "Home") {?> 
 			var div4 = document.createElement('div');
-			div4.innerHTML = '<img width = "16" height = "16" src="' + 'images/home.png'  + '"> ' + "<?php echo $address; ?>";
+			div4.innerHTML = '<img alt = "Batcave Home" width = "16" height = "16" src="' + 'images/home.png'  + '"> ' + "<?php echo $address; ?>";
 			div4.id = "legendEntry";
 			legend.appendChild(div4);
 			<?php } ?>
@@ -404,7 +404,7 @@ try
 <body>
 	<ul>
 	  <li><a class="active" href="/">Home</a></li>
-	  <li><a id="getLocation" href="/">Change Location</a></li>
+	  <li><a id="getLocation" href="/">Update Location</a></li>
 	  <li><a href ="https://github.com/MSMareddy/WebAppSWE">About</a></li>
 	</ul>
 	<form method = "post">

@@ -67,11 +67,11 @@ body{
   
   background-image: url(/images/background2.jpeg);
 
-  background-image: filter: blur(8px);
+  /*background-image: filter: blur(8px);*/
 
   background-repeat: no-repeat;
-  //background-image-opacity: 0.8;
-  //filter: alpha(opacity=80);
+  /*background-image-opacity: 0.8;*/
+  /*filter: alpha(opacity=80);*/
   background-size: 100% auto;
 
 }
