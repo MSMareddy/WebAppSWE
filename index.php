@@ -36,10 +36,13 @@ try
 		$price = $priceArg;
 	}
 	
+	#set radius to 16000m(10 miles) and change to cookie value if set.
 	$radius = 16000;
 	if (isset($_COOKIE["radiusCookie"])) {
 		$radius = $_COOKIE["radiusCookie"];
 	}
+	
+	#set address, coordinates to PKI by default. If cookie exists set to home coordinates.
 	$address = "PKI";
 	$latLong = "41.247389, -96.016763";
 	if (isset($_COOKIE["latCookie"]) && isset($_COOKIE["longCookie"])) {
@@ -60,7 +63,17 @@ try
 		
 		<script>
 		try {
+			/**
+			 * Executes function on window load.
+			 */
 			window.onload = function(){
+				/**
+				 * if href is clicked ask for confirmation and execute get currentPosition method.
+				 * get current position transfers control to showPosition & Error method.
+				 * If user declines/geolocation is not compatible don't redirect.
+				 *
+				 * @return boolean page redirects based on return value.
+				 */
 				document.getElementById("getLocation").onclick = function() {
 					if (navigator.geolocation) {
 						if (confirm("Do you want to change to current location?")) {
@@ -72,6 +85,15 @@ try
 					}
 					return false;
 				}
+				/**
+				 * showPosition
+				 *
+				 * Set cookie to current latitude and longitude.
+				 * Cookie is valid for 1 week.
+				 * Page refreshes after setting cookie value to reflect changes.
+				 *
+				 * @param position contains the current coordinates
+				 */
 				function showPosition(position) {
 					var lat = String(position.coords.latitude).substring(0,8);
 					var lng = String(position.coords.longitude).substring(0,8);
@@ -82,6 +104,13 @@ try
 					document.cookie = "longCookie=" + lng + ";" + expires + ";path=/";
 					location.reload(true);
 				}
+				/**
+				 * error
+				 * 
+				 * Alerts the user with error message.
+				 *
+				 * @param err error object
+				 */
 				function error(err) {
 					switch(error.code) {
 						case error.PERMISSION_DENIED:
@@ -104,6 +133,17 @@ try
 			var infowindow;
 			var count = 0;
 			
+			/**
+			 * initMap
+			 *
+			 * Initialise Map.
+			 * Set center of map get the coordinates from website arguments.
+			 * Initialise circle with center and radius arguments.
+			 * Restrict map to circular bounds.
+			 * Set custom stylesheet for Map.
+			 * Pass the request from user arguments.
+			 * Initialise Home Marker.
+			 */
 			function initMap() {
 			var home = new google.maps.LatLng(<?php echo $latLong; ?>);
 			
@@ -302,7 +342,8 @@ try
 				},
 				<?php } ?>
 			});
-						
+			
+			// add legend elements			
 			var legend = document.getElementById('legend');
 			
 			var div = document.createElement('div');
@@ -326,8 +367,22 @@ try
 			div4.id = "legendEntry";
 			legend.appendChild(div4);
 			<?php } ?>
+			// move legend div inside map.
 			map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
 			
+			/**
+			 * textSearch
+			 *
+			 * Get all the results, loop through them.
+			 * Count all the results within circular bounds.
+			 * If none within bounds alert user.
+			 * Create Custom marker for each result.
+			 * If there are any errors while adding marker log it to console.
+			 *
+			 * @param request request object containing all paramters for search.
+			 * @param results contains all resulting objects from results.
+			 * @param status ensures that the google places API is up and running.
+			 */
 			service.textSearch(request, function(results, status) {
 			  if (status === google.maps.places.PlacesServiceStatus.OK) {
 				for (var i = 0; i < results.length; i++) {
@@ -343,7 +398,6 @@ try
 				}
 				console.log("Results within bounds: " + count);
 				
-				legend.appendChild(div);
 				if (count === 0) {
 					alert("No Places found for Restraunt type: <?php echo $option; ?> and price level: <?php echo $price; ?>\nPlease choose something else.");
 				}
@@ -351,6 +405,16 @@ try
 			});
 			}
 			
+			/**
+			 * createMarker
+			 *
+			 * Add markers to map.
+			 * Labeled with approx distance from home to restraunt in miles.
+			 * Marker icon is blue and bold text if place open. uses red icon if closed.
+			 * Added Listener which displays more infor like address and link to view on gmaps on click.
+			 *
+			 * @param place contains the place information.
+			 */
 			function createMarker(place) {
 				var weightOfFont = "normal";
 				var openNow = "Business Hours Info Unavailable";
@@ -397,6 +461,7 @@ try
 			}
 		}
 		catch(generalError) {
+			//General error logging to console.
 			console.log("General Error: " + generalError.message);
 		}
 		</script>
