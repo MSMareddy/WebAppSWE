@@ -40,8 +40,3 @@ $(function() {
 
 });
 
-function functionABC(selectedElement){
-	document.getElementById("selected").value = selectedElement;
-	console.log(document.getElementById("selected").value);
-}
-
