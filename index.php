@@ -551,7 +551,6 @@ try
 			Select restaurant option:
 		</div>
 		<div class="TypeListBox">
-			<input type="hidden" name="selected" id="selected" value="<?php echo $option; ?>/>
 			<div id="dd" class="wrapper-dropdown-3" tabindex="1">
 				<span>Food</span>
 				<ul class="dropdown">
