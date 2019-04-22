@@ -91,6 +91,7 @@ try
 				var elements = document.getElementsByClassName("catEl");
 				for (var i=0; i < elements.length; i++) {
 					elements[i].onclick = function() {
+						console.log("Ele: " + elements[i]);
 						var optionArg = elements[i].id;
 						document.getElementById("selected").value = optionArg;
 						console.log("Selected: " + optionArg);
