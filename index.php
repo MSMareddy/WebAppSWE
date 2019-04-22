@@ -353,7 +353,7 @@ try
 			
 			function createMarker(place) {
 				var weightOfFont = "normal";
-				var openNow = "N/A";
+				var openNow = "Business Hours Info Unavailable";
 				var color = "blue";
 				try {
 					var open = place.opening_hours.open_now;
