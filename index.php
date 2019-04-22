@@ -113,9 +113,14 @@ try
 				 * @return boolean page redirects based on return value.
 				 */
 				document.getElementById("clearLocation").onclick = function() {
-					document.cookie = "latCookie= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
-					document.cookie = "longCookie= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
-					return true;
+				if (confirm("Do you want to reset to PKI?")) {
+						document.cookie = "latCookie= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
+						document.cookie = "longCookie= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
+						return true;
+					} 
+					else {
+						return false;
+					}
 				}
 				
 				/**
