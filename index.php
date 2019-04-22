@@ -330,7 +330,7 @@ try
 			var HOME_MARKER = new google.maps.Marker({
 				position: home,
 				map: map,
-				//animation: google.maps.Animation.DROP,
+				animation: google.maps.Animation.DROP,
 				title: '<?php echo $address; ?>',
 				<?php if($address == "Home") {?> 
 				icon: 'images/home.png',
@@ -446,7 +446,7 @@ try
 				  map: map,
 				  title: place.name,
 				  position: place.geometry.location,
-				  //animation: google.maps.Animation.DROP,
+				  animation: google.maps.Animation.DROP,
 				  label: {
 					text: diffString,
 					fontSize: '8px',
