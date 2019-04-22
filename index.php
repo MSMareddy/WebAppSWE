@@ -162,7 +162,7 @@ try
 						strictBounds: false
 					},
 				zoom: 11,
-				mapTypeControl: true,
+				mapTypeControl: false,
 				mapTypeControlOptions: {
 				  style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
 				  position: google.maps.ControlPosition.TOP_CENTER
@@ -172,7 +172,7 @@ try
 				  position: google.maps.ControlPosition.LEFT_CENTER
 				},
 				scaleControl: true,
-				streetViewControl: true,
+				streetViewControl: false,
 				streetViewControlOptions: {
 				  position: google.maps.ControlPosition.LEFT_TOP
 				},
@@ -330,7 +330,11 @@ try
                     }
 				]
 			});
+			var centerControlDiv = document.createElement('div');
+			var centerControl = new CenterControl(centerControlDiv, map);
 
+			centerControlDiv.index = 1;
+			map.controls[google.maps.ControlPosition.TOP_CENTER].push(centerControlDiv);
 
 			var request = {
 			  query: '<?php echo $option; ?>',
@@ -416,9 +420,6 @@ try
 				if (count === 0) {
 					alert("No Places found for Restraunt type: <?php echo $option; ?> and price level: <?php echo $price; ?>\nPlease choose something else.");
 				}
-				else {
-					legend.style.display = "block";
-				}
 			  }
 			});
 			}
@@ -477,7 +478,42 @@ try
 				  infowindow.open(map, this);
 				});
 			}
-		}
+			/**
+			* The CenterControl adds a control to the map that recenters the map on
+			* Chicago.
+			* This constructor takes the control DIV as an argument.
+			* @constructor
+			*/
+			function CenterControl(controlDiv, map) {
+
+				// Set CSS for the control border.
+				var controlUI = document.createElement('div');
+				controlUI.style.backgroundColor = '#fff';
+				controlUI.style.border = '2px solid #fff';
+				controlUI.style.borderRadius = '3px';
+				controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
+				controlUI.style.cursor = 'pointer';
+				controlUI.style.marginBottom = '22px';
+				controlUI.style.textAlign = 'center';
+				controlUI.title = 'Show Legend';
+				controlDiv.appendChild(controlUI);
+
+				// Set CSS for the control interior.
+				var controlText = document.createElement('div');
+				controlText.style.color = 'rgb(25,25,25)';
+				controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
+				controlText.style.fontSize = '16px';
+				controlText.style.lineHeight = '38px';
+				controlText.style.paddingLeft = '5px';
+				controlText.style.paddingRight = '5px';
+				controlText.innerHTML = 'Show Legend';
+				controlUI.appendChild(controlText);
+
+			// Setup the click event listeners: simply set the map to Chicago.
+			controlUI.addEventListener('click', function() {
+			  legend.style.display = "block";
+			});
+			}
 		catch(generalError) {
 			//General error logging to console.
 			console.log("General Error: " + generalError.message);
