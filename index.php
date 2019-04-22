@@ -500,6 +500,7 @@ try
 
 				// Set CSS for the control interior.
 				var controlText = document.createElement('div');
+				controlText.id = "legendButton";
 				controlText.style.color = 'rgb(25,25,25)';
 				controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
 				controlText.style.fontSize = '16px';
@@ -511,7 +512,16 @@ try
 
 				// Setup the click event listeners: simply set the map to Chicago.
 				controlUI.addEventListener('click', function() {
-				  legend.style.display = "block";
+				  var legendButton = document.getElementById('legendButton');
+				  
+				  if(legend.style.display == "none") {
+				   legend.style.display = "block";
+				   legendButton.innerHTML = "Hide Legend";
+				  }
+				  else {
+					legend.style.display = "none";
+					legendButton.innerHTML = "Show Legend";
+				  }
 				});
 			}
 		}
