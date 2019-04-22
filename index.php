@@ -62,8 +62,8 @@ try
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 		
 		<!-- <?php echo "Radius: ", $radius, " Address: ", $address; ?> -->
-		<script src = "js/Elements.js"/> 
-		<script src = "js/script.js"/>
+		<script src = "js/Elements.js"></script> 
+		<script src = "js/script.js"></script>
 		
 	</head>
 <body>
@@ -92,10 +92,10 @@ try
 					<li><a href="#" class="catEl" id = "pizza"><i class="fas fa-pizza-slice"></i>Pizza</a></li>
 					<li><a href="#" class="catEl" id = "mexican"><i class="fas fa-pepper-hot"></i>Mexican</a></li>
 					<li><a href="#" class="catEl" id = "burgers"><i class="fas fa-hamburger"></i>Burgers</a></li>	
-					<li><a href="#" class="catEl"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
-					<li><a href="#" class="catEl"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
-					<li><a href="#" class="catEl"><i class="fas fa-hamburger"></i></i>Burgers</a></li>	
-					<li><a href="#" class="catEl"><i class="fas fa-hamburger"></i></i>Burgers</a></li>
+					<li><a href="#" class="catEl" id = "abc"><i class="fas fa-hamburger"></i>Def</a></li>	
+					<li><a href="#" class="catEl"><i class="fas fa-hamburger"></i>Burgers</a></li>	
+					<li><a href="#" class="catEl"><i class="fas fa-hamburger"></i>Burgers</a></li>	
+					<li><a href="#" class="catEl"><i class="fas fa-hamburger"></i>Burgers</a></li>
 				</ul>
 			</div>
 		</div>
